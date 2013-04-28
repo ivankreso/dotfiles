@@ -1,0 +1,15 @@
+[user]
+	name = Ivan Kreso
+	email = kreso.ivan@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = meld
+[credential]
+	helper = cache --timeout=3600
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 759x584+0+25
+	history-view-vpane-position = 256
+	main-window-view = HistoryView
+	file-view-vpane-position = 96

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/kreso/Dropbox/labs/NOS/lab3'
+let g:netrw_dirhist_2='/home/kreso/Dropbox/labs/NOS/lab3/src'
+let g:netrw_dirhist_3='/home/kreso/code/cpp/sedgewick/program1_3'
+let g:netrw_dirhist_4='/home/kreso/code/cpp/sedgewick/program1_3/src'
+let g:netrw_dirhist_5='/home/kreso/projects/master_thesis/src/stereo-master/StereoVision'
