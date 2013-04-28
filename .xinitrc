@@ -12,9 +12,11 @@
 systemd --user &
 
 exec openbox-session
+#exec xmonad
 #exec i3
 #exec ck-launch-session dbus-launch openbox-session
 #exec gnome-session-cinnamon
 #exec gnome-session
 #exec mate-session
 #exec enlightenment_start
+
