@@ -10,7 +10,7 @@ set fenc=utf-8
 set termencoding=utf-8
 
 " set font for gvim
-set guifont=Inconsolata\ Medium\ 11
+set guifont=Inconsolata\ Medium\ 10
 
 " Vundle plugin manager
 set nocompatible               " be iMproved
@@ -19,8 +19,8 @@ filetype off                   " required!
 " set <leader> to , (default is \)
 "let mapleader = ","
 "set tags=tags;/
-"set tags=~/.vim/stdtags,tags,.tags,../tags
-set tags+=tags,/usr/include/opencv2/opencv_tags
+set tags=~/.vim/stdtags,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
+"set tags+=tags,/usr/include/opencv2/opencv_tags
 " Load standard tag files
 "set tags+=~/.vim/tags/cpp
 
@@ -38,13 +38,11 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-Bundle 'altercation/solarized'
 Bundle 'scrooloose/nerdcommenter'
+"Bundle 'altercation/solarized'
 "Bundle 'Lokaltog/TagHighlight'
 "Bundle 'xolox/vim-easytags'
-"Bundle 'vim-colors-solarized'
-"Bundle 'tpope/vim-pathogen'
-" others: vim-cpp (aur)
+" others: vim-cpp (aur), pathogen
 
 filetype plugin indent on     " required!
 
@@ -82,6 +80,11 @@ set showmatch
 set comments=sl:/*,mb:\ *,elx:\ */
 
 
+" ================ Turn Off Swap Files ==============
+set noswapfile
+set nobackup
+set nowb
+
 
 " ----------Key shortcuts-----------
 " NERDtree toggle - no recursive map needed
@@ -93,6 +96,21 @@ noremap <C-y> :TagbarToggle<CR>
 nnoremap ; :
 nnoremap : ;
 
+" Reselect visual block after indent/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Easy cursor navigation in insert mode
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
 
 " minibufexpl options
 let g:miniBufExplMapWindowNavVim = 1
@@ -106,6 +124,9 @@ let g:miniBufExplModSelTarget = 1
 "let g:miniBufExplTabWrap = 1
 "let g:miniBufExplUseSingleClick = 1
 "let g:miniBufExplCheckDupeBufs = 0
+
+" show hidden files in nerdtree
+let NERDTreeShowHidden=1
 
 " youcompleteme options
 set completeopt=menu

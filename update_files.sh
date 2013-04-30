@@ -13,6 +13,7 @@ cp ~/.conkyrc .
 cp ~/.compton.conf . 
 cp ~/.gtkrc-2.0 .
 cp ~/.gtkrc-2.0.mine .
+cp ~/.mpd/mpd.conf .
 
 rm -rf bin/
 cp -rf ~/bin/ .

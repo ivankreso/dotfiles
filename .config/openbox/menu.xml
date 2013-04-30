@@ -21,6 +21,11 @@
 				<execute>gvim</execute>
 			</action>
 		</item>
+		<item label="Sonata">
+			<action name="Execute">
+				<execute>sonata</execute>
+			</action>
+		</item>
 		<item label="Clementine">
 			<action name="Execute">
 				<execute>clementine</execute>
@@ -76,6 +81,11 @@
 			<item label="Eclipse Android">
 				<action name="Execute">
 					<execute>/home/kreso/Programs/adt-bundle-linux/eclipse/eclipse</execute>
+				</action>
+			</item>
+			<item label="Kdbg">
+				<action name="Execute">
+					<execute>kdbg</execute>
 				</action>
 			</item>
 			<item label="Texstudio">

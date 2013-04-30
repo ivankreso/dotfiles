@@ -57,8 +57,6 @@ if [ "$TERM" = "linux" ]; then
     echo -en "\e]P7dedede"
     echo -en "\e]PFf2f2f2"
 
-     #this is an attempt at working utf8 line drawing chars in the linux-console
-#    export TERM=linux+utf8
     clear #hmm, yeah we need this or else we get funky background collisions
 fi
 

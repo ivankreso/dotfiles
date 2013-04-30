@@ -9,7 +9,7 @@
 #run () { type -p $1 >/dev/null && exec $* & }
 
 #run systemd as user instance
-systemd --user &
+#systemd --user &
 
 exec openbox-session
 #exec xmonad

@@ -47,6 +47,8 @@ gnome-screensaver &
 #pytyle &
 pytyle3 &
 
+# start music deamon
+#mpd
 
 ######### END CUSTOM #########
 
