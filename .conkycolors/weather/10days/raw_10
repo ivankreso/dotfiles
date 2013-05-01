@@ -1,24 +1,24 @@
-Today
-30.png
-82
+Tonight
+29.png
+84
 61
 Partly Cloudy
-0%
-NE 5mph
+20%
+E 3mph
 Thu
 26.png
 80
-61
+59
 Cloudy
 20%
 E 5mph
 Fri
-30.png
-76
+11.png
+78
 56
-Partly Cloudy
-20%
-WSW 11mph
+Showers
+40%
+SW 11mph
 Sat
 28.png
 76
@@ -37,22 +37,22 @@ Mon
 11.png
 71
 57
-Showers
-60%
+Light Rain
+70%
 NNE 7mph
 Tue
 11.png
 67
 55
 Showers
-40%
+70%
 NNE 7mph
 Wed
 11.png
 71
 54
-Showers
-40%
+Light Rain
+70%
 NE 8mph
 Thu
 30.png
@@ -61,22 +61,10 @@ Thu
 Partly Cloudy
 10%
 NE 8mph
-68
-52
-N/A
-N/A
-PollenCast
-Aches & Pains
-lotame.lot_abbr=lot_abbr;lotame.lot_id=lot_id;}
-if(TWC.pco.get("page")!=null&&typeof(TWC.pco.get("page"))!="undefined"){_cc1884.add("seg","loctime_",TWC.pco.get("page").loctime);_cc1884.add("seg","pageId_"+TWC.pco.get("page").pageId);_cc1884.add("seg","locale_"+TWC.pco.get("page").locale);_cc1884.add("seg","lang_"+TWC.pco.get("page").lang);_cc1884.add("seg","ampm_"+TWC.pco.get("page").ampm);}
-if(TWC.pco.get("ad")!=null&&typeof(TWC.pco.get("ad"))!="undefined"){if(TWC.pco.get("ad.site")!=null&&typeof(TWC.pco.get("ad.site"))!="undefined"){_cc1884.add("seg","site_"+TWC.pco.get("ad").site);}
-if(TWC.pco.get("ad.pageIdCode")!=null&&typeof(TWC.pco.get("ad.pageIdCode"))!="undefined"){_cc1884.add("seg","pageIdCode_"+TWC.pco.get("ad").pageIdCode);}
-if(TWC.pco.get("ad.mode")!=null&&typeof(TWC.pco.get("ad.mode"))!="undefined"){_cc1884.add("seg","mode_"+TWC.pco.get("ad").mode);}
-if(TWC.pco.get("ad.pageDeclaration")!=null&&typeof(TWC.pco.get("ad.pageDeclaration"))!="undefined"){_cc1884.add("seg","pageDeclaration_"+TWC.pco.get("ad").pageDeclaration);}
-if(TWC.pco.get("ad.zone")!=null&&typeof(TWC.pco.get("ad.zone"))!="undefined"){_cc1884.add("seg","zone_"+TWC.pco.get("ad").zone);}}
-_cc1884.add("seg","realTemp_"+TWC.pco.get("wx").realTemp);}
-var google_conversion_id=1069483923;var google_conversion_label="y3bYCMfJgQIQk4_8_QM";var google_custom_params=window.google_tag_params;var google_remarketing_only=true;
-Company
-Explore
-Partners
-Our Products
+Fri
+30.png
+67
+51
+Partly Cloudy
+20%
+NE 8mph

@@ -18,8 +18,10 @@ filetype off                   " required!
 
 " set <leader> to , (default is \)
 "let mapleader = ","
-"set tags=tags;/
-set tags=~/.vim/stdtags,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
+set tags=./tags;/
+"set tags=~/.vim/tags/cpp,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
+set tags+=~/.vim/tags/cpp
+set tags+=/usr/include/opencv2/opencv_tags
 "set tags+=tags,/usr/include/opencv2/opencv_tags
 " Load standard tag files
 "set tags+=~/.vim/tags/cpp
