@@ -20,7 +20,7 @@ rm -rf scripts/
 cp -rf ~/scripts/ .
 rm -rf .mpd/
 mkdir .mpd
-cp -rf ~/.mpd/mpd.conf .
+cp -rf ~/.mpd/mpd.conf .mpd/mpd.conf
 rm -rf .config/
 mkdir .config
 cp -rf ~/.config/openbox .config/openbox
