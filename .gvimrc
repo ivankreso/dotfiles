@@ -1,4 +1,4 @@
-"set guioptions-=m  "remove menu bar
+set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=l
@@ -11,13 +11,18 @@ set termencoding=utf-8
 
 " set font for gvim
 set guifont=Inconsolata\ Medium\ 10
+" unlock Ctrl+j from bash
+let g:BASH_Ctrl_j = 'off'
+let g:C_Ctrl_j = 'off'
+
+au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Vundle plugin manager
 set nocompatible               " be iMproved
 filetype off                   " required!
 
 " set <leader> to , (default is \)
-"let mapleader = ","
+let mapleader = ","
 set tags=./tags;/
 "set tags=~/.vim/tags/cpp,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
 set tags+=~/.vim/tags/cpp
@@ -40,7 +45,9 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-commentary'
+"Bundle 'scrooloose/nerdcommenter'
+"Bundle 'klen/python-mode'  - lose
 "Bundle 'altercation/solarized'
 "Bundle 'Lokaltog/TagHighlight'
 "Bundle 'xolox/vim-easytags'
@@ -142,6 +149,10 @@ let g:ycm_confirm_extra_conf = 0
 "let g:syntastic_cpp_checker = "ycm"
 "let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
+"set updatetime=4000
+"let g:ycm_allow_changing_updatetime = 0
+"let g:easytags_updatetime_min = 4000
+
 " Cool tab completion stuff
 set wildmenu
 set wildmode=list:longest,full
@@ -171,9 +182,9 @@ let g:DoxygenToolkit_authorName="Gerhard Gappmeier <gerhard.gappmeier@ascolab.co
 " Enhanced keyboard mappings
 "
 " in normal mode F2 will save the file
-nmap <F2> :w<CR>
+nnoremap <F2> :w<CR>
 " in insert mode F2 will exit insert, save, enters insert again
-imap <F2> <ESC>:w<CR>i
+inoremap <F2> <ESC>:w<CR>i
 " map F3 and SHIFT-F3 to toggle spell checking
 nmap <F3> :setlocal spell spelllang=en<CR>
 imap <F3> <ESC>:setlocal spell spelllang=en<CR>i

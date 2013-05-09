@@ -16,19 +16,24 @@
 				<execute>nautilus</execute>
 			</action>
 		</item>
-		<item label="gVim">
-			<action name="Execute">
-				<execute>gvim</execute>
-			</action>
-		</item>
 		<item label="Sonata">
 			<action name="Execute">
 				<execute>sonata</execute>
 			</action>
 		</item>
+		<item label="qBittorrent">
+			<action name="Execute">
+				<execute>qbittorrent</execute>
+			</action>
+		</item>
 		<item label="Clementine">
 			<action name="Execute">
 				<execute>clementine</execute>
+			</action>
+		</item>
+		<item label="gVim">
+			<action name="Execute">
+				<execute>gvim</execute>
 			</action>
 		</item>
 		<item label="Disks">
@@ -46,16 +51,6 @@
 				<execute>gnome-system-monitor</execute>
 			</action>
 		</item>
-		<item label="Vuze">
-			<action name="Execute">
-				<execute>vuze</execute>
-			</action>
-		</item>
-		<item label="qBittorrent">
-			<action name="Execute">
-				<execute>qbittorrent</execute>
-			</action>
-		</item>
 		<item label="PCManFM">
 			<action name="Execute">
 				<execute>pcmanfm</execute>
@@ -68,6 +63,11 @@
 		</item>
 		<separator/>
 		<menu id="1" label="Devtools">
+			<item label="Kdevelop">
+				<action name="Execute">
+					<execute>kdevelop</execute>
+				</action>
+			</item>
 			<item label="Eclipse C++">
 				<action name="Execute">
 					<execute>/home/kreso/Programs/eclipse_cpp/eclipse</execute>
@@ -81,6 +81,11 @@
 			<item label="Eclipse Android">
 				<action name="Execute">
 					<execute>/home/kreso/Programs/adt-bundle-linux/eclipse/eclipse</execute>
+				</action>
+			</item>
+			<item label="Regexxer">
+				<action name="Execute">
+					<execute>regexxer</execute>
 				</action>
 			</item>
 			<item label="Kdbg">
