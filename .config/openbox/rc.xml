@@ -180,7 +180,7 @@
     </keybind>
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>gnome-terminal</command>
+        <command>terminator</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">

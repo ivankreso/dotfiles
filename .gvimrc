@@ -4,10 +4,20 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=l
 set guioptions-=L
 
+if has("gui_running")
+   " GUI is running or is about to start.
+   " Maximize gvim window.
+   set lines=58 columns=160
+endif
+
 " set utf-8 encoding
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
+
+" set <leader> to , (default is \)
+let mapleader = ","
+let maplocalleader = ","
 
 " set font for gvim
 set guifont=Inconsolata\ Medium\ 10
@@ -15,14 +25,12 @@ set guifont=Inconsolata\ Medium\ 10
 let g:BASH_Ctrl_j = 'off'
 let g:C_Ctrl_j = 'off'
 
-au BufNewFile,BufRead *.cpp set syntax=cpp11
+"au BufNewFile,BufRead *.cpp set syntax=cpp11
 
 " Vundle plugin manager
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-" set <leader> to , (default is \)
-let mapleader = ","
 set tags=./tags;/
 "set tags=~/.vim/tags/cpp,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
 set tags+=~/.vim/tags/cpp
@@ -44,8 +52,9 @@ Bundle 'gmarik/vundle'
 " Plugins..
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-commentary'
+"Bundle 'majutsushi/tagbar'
+"Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'tpope/vim-commentary'
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'klen/python-mode'  - lose
 "Bundle 'altercation/solarized'
@@ -79,14 +88,15 @@ set softtabstop=3
 " Enable mouse support in console
 set mouse=a
 " Line Numbers PWN!
-set number
+"set number
+set nonumber
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=120
+"set textwidth=120
 " highlight matching braces
 set showmatch
 " intelligent comments
-set comments=sl:/*,mb:\ *,elx:\ */
+"set comments=sl:/*,mb:\ *,elx:\ */
 
 
 " ================ Turn Off Swap Files ==============
@@ -94,12 +104,15 @@ set noswapfile
 set nobackup
 set nowb
 
+" disable autocomments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+"set formatoptions-=cro
 
 " ----------Key shortcuts-----------
 " NERDtree toggle - no recursive map needed
 noremap <C-b> :NERDTreeToggle<CR>
 noremap <C-t> :TlistToggle<CR>
-noremap <C-y> :TagbarToggle<CR>
+"noremap <C-y> :TagbarToggle<CR>
 
 " Swap ; and :  Convenient.
 nnoremap ; :

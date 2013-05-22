@@ -3,6 +3,8 @@
 
 ######### BEGIN CUSTOM #########
 
+alias cmakedebug='cmake $1 -DCMAKE_BUILD_TYPE=DEBUG'
+alias cmakerelease='cmake $1 -DCMAKE_BUILD_TYPE=RELEASE'
 #alias nautilus="nautilus --no-desktop"
 #alias pacman="pacman-color"
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
@@ -10,6 +12,9 @@
 xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
 setxkbmap -layout hr us
 #setxkbmap -layout hr
+
+# Map caps lock to esc
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # Mouse control
 xset m 7 10 &     # Very Fast
