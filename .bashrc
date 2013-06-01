@@ -3,11 +3,37 @@
 #
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+# start tmux session
+[[ -z "$TMUX" ]] && exec tmux
 
 #PS1='[\u@\h \W]\$ '
 #PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
 
 export EDITOR="vim"
+export VISUAL=gvim
+export HISTIGNORE="&:[bf]g:exit"
+export HISTCONTROL=ignoredups
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+export BROWSER=chromium
+export PAGER=less
+export MANPAGER=less
+
+# less man page colors
+export GROFF_NO_SGR=1
+export LESS="FRSXQ"
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+export LESS_TERMCAP_ue=$'\E[0m'
+
+# grep colors
+export GREP_OPTIONS='--color=auto'
+export GREP_COLOR='1;32'
+
 #PATH=/home/kreso/Packages/mpich2-install/bin:$PATH;
 #export PATH
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
@@ -63,7 +89,7 @@ fi
 
 alias ls="ls -hF --color"
 alias ll="ls -l"
-alias la="ls -a"
+alias la="ls -la"
 
 
 function mkcd() { mkdir "$1" && cd "$1"; }
@@ -77,13 +103,19 @@ function findexec() { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;;
 
 #Different colors for remote server
 if [ -z "$SSH_TTY" ]; then
-    PS1="\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
+    PS1="\[\033[36m\]antares\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
 else
-    PS1="\[\033[35m\]\u\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
+    PS1="\[\033[35m\]antares\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
 fi
+#if [ -z "$SSH_TTY" ]; then
+#    PS1="\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
+#else
+#    PS1="\[\033[35m\]\u\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
+#fi
 
 for f in '/usr/share/bash-completion/bash_completion' '/etc/bash_completion'; do
     if [ -e "$f" ]; then
         . "$f"
     fi
 done
+

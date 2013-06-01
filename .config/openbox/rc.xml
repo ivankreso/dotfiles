@@ -123,7 +123,7 @@
       <name>Main</name>
       <name>Work 1</name>
       <name>Work 2</name>
-      <name>Fun</name>
+      <name>Media</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -180,7 +180,7 @@
     </keybind>
     <keybind key="C-A-T">
       <action name="Execute">
-        <command>terminator</command>
+        <command>urxvt -borderLess</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">

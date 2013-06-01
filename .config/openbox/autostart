@@ -54,5 +54,10 @@ pytyle3 &
 # start music deamon
 #mpd
 
+# start thunar daemon
+thunar --daemon &
+
+#urxvtd &
+
 ######### END CUSTOM #########
 

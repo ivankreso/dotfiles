@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
-		<item label="Chrome">
+		<item label="Chromium">
 			<action name="Execute">
-				<execute>google-chrome</execute>
+				<execute>chromium</execute>
 			</action>
 		</item>
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>terminator</execute>
+				<execute>urxvt -borderLess</execute>
+			</action>
+		</item>
+		<item label="Clementine">
+			<action name="Execute">
+				<execute>clementine</execute>
 			</action>
 		</item>
 		<item label="Sonata">
@@ -16,9 +21,9 @@
 				<execute>sonata</execute>
 			</action>
 		</item>
-		<item label="Nautilus">
+		<item label="Thunar">
 			<action name="Execute">
-				<execute>nautilus</execute>
+				<execute>thunar</execute>
 			</action>
 		</item>
 		<item label="PCManFM">
@@ -34,11 +39,6 @@
 		<item label="Speedcrunch">
 			<action name="Execute">
 				<execute>speedcrunch</execute>
-			</action>
-		</item>
-		<item label="Clementine">
-			<action name="Execute">
-				<execute>clementine</execute>
 			</action>
 		</item>
 		<item label="gVim">
@@ -145,6 +145,11 @@
 			</item>
 		</menu>
 		<menu id="2" label="Editors">
+			<item label="Geany">
+				<action name="Execute">
+					<execute>geany</execute>
+				</action>
+			</item>
 			<item label="Gedit">
 				<action name="Execute">
 					<execute>gedit</execute>
@@ -157,6 +162,11 @@
 			</item>
 		</menu>
 		<menu id="7" label="Multimedia">
+			<item label="Deadbeef">
+				<action name="Execute">
+					<execute>deadbeef</execute>
+				</action>
+			</item>
 			<item label="Google Earth">
 				<action name="Execute">
 					<execute>google-earth</execute>
