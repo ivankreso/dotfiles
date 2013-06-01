@@ -3,11 +3,11 @@ My Linux dotfiles
 
 Setup
 -----
-* Distro: Archlinux
+* Distro: Arch Linux
 * Window manager: Openbox
 * Terminal: Urxvt with tmux
 * Editor: Vim
 * Addons: Conky, Compton, Cairo-dock, Nitrogen, Slim
-* Music player: MPD with Sonata for frontend.
+* Music player: mpd with Sonata for frontend.
 
 

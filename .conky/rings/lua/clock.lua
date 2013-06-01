@@ -118,20 +118,20 @@ settings_table = {
     start_angle=0,
     end_angle=360
   },
---{
---    name='cpu',
---    arg='cpu2',
---    max=100,
---    bg_colour=0xffffff,
---    bg_alpha=0.1,
---    fg_colour=0xd7d7d7,
---    fg_alpha=0.6,
---    x=155, y=338,
---    radius=25,
---    thickness=10,
---    start_angle=0,
---    end_angle=360
---  },
+  {
+    name='cpu',
+    arg='cpu2',
+    max=100,
+    bg_colour=0xffffff,
+    bg_alpha=0.1,
+    fg_colour=0xd7d7d7,
+    fg_alpha=0.6,
+    x=155, y=348,
+    radius=30,
+    thickness=5,
+    start_angle=0,
+    end_angle=360
+  },
 {
     name='memperc',
     arg='/',
