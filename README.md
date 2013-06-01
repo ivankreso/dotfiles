@@ -1,11 +1,12 @@
-My linux config files including settings for openbox.
+My Archlinux dotfiles
+------------------------
 
-Setup:
-openbox,
-conky,
-compton,
-cairo-dock,
-nitrogen,
-mpd with sonata for frontend.
+Setup
+-----
+* Window manager: Openbox
+* Terminal: Urxvt with dmux
+* Editor: Vim
+* Addons: Conky, Compton, Cairo-dock, Nitrogen
+* Music player: MPD with Sonata for frontend.
 
 
