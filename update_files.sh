@@ -20,6 +20,7 @@ rm -rf bin/
 cp -rf ~/bin/ .
 rm -rf scripts/
 cp -rf ~/scripts/ .
+cp /usr/local/bin/rc.local scripts/
 rm -rf .mpd/
 mkdir .mpd
 cp -rf ~/.mpd/mpd.conf .mpd/mpd.conf

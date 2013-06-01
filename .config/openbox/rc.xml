@@ -198,6 +198,11 @@
     <keybind key="W-C-Right">
       <action name="SendToDesktopRight"/>
     </keybind>
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>wmctrl -r urxvt -b toggle,fullscreen</command>
+      </action>
+    </keybind>
     <keybind key="W-1">
       <action name="SendToDesktop">
         <follow>no</follow>
