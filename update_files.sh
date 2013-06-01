@@ -29,6 +29,8 @@ mkdir .config
 cp -rf ~/.config/openbox .config/openbox
 rm -rf .vim/
 cp -rf ~/.vim .
+rm -rf .conky/
+cp -rf ~/.conky .
 rm -rf .conkycolors/
 cp -rf ~/.conkycolors .
 #rm -rf .xmonad/

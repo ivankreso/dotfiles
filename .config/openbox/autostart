@@ -42,7 +42,8 @@ cairo-dock -c &
 trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 
 # Desktop info
-conky -c /home/kreso/.conkycolors/conkyrc &
+#conky -c /home/kreso/.conkycolors/conkyrc &
+conky -c ~/.conky/rings/conkyrc0 &
 #xscreensaver --no-splash &
 gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
