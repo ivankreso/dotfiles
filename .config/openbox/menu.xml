@@ -11,9 +11,9 @@
 				<execute>urxvt -borderLess</execute>
 			</action>
 		</item>
-		<item label="Clementine">
+		<item label="Thunar">
 			<action name="Execute">
-				<execute>clementine</execute>
+				<execute>thunar</execute>
 			</action>
 		</item>
 		<item label="Sonata">
@@ -21,14 +21,9 @@
 				<execute>sonata</execute>
 			</action>
 		</item>
-		<item label="Thunar">
+		<item label="Disks">
 			<action name="Execute">
-				<execute>thunar</execute>
-			</action>
-		</item>
-		<item label="PCManFM">
-			<action name="Execute">
-				<execute>pcmanfm</execute>
+				<execute>gnome-disks</execute>
 			</action>
 		</item>
 		<item label="qBittorrent">
@@ -46,11 +41,6 @@
 				<execute>gvim</execute>
 			</action>
 		</item>
-		<item label="Disks">
-			<action name="Execute">
-				<execute>gnome-disks</execute>
-			</action>
-		</item>
 		<item label="Network">
 			<action name="Execute">
 				<execute>gnome-control-center network</execute>
@@ -59,6 +49,21 @@
 		<item label="System Monitor">
 			<action name="Execute">
 				<execute>gnome-system-monitor</execute>
+			</action>
+		</item>
+		<item label="Thunderbird">
+			<action name="Execute">
+				<execute>thunderbird</execute>
+			</action>
+		</item>
+		<item label="Clementine">
+			<action name="Execute">
+				<execute>clementine</execute>
+			</action>
+		</item>
+		<item label="PCManFM">
+			<action name="Execute">
+				<execute>pcmanfm</execute>
 			</action>
 		</item>
 		<item label="Firefox">

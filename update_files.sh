@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cp ~/.gvimrc .
 cp ~/.vimrc .
 cp ~/.xinitrc .
 cp ~/.bashrc .
@@ -27,8 +26,6 @@ cp -rf ~/.mpd/mpd.conf .mpd/mpd.conf
 rm -rf .config/
 mkdir .config
 cp -rf ~/.config/openbox .config/openbox
-rm -rf .vim/
-cp -rf ~/.vim .
 rm -rf .conky/
 cp -rf ~/.conky .
 rm -rf .conkycolors/
@@ -37,3 +34,5 @@ cp -rf ~/.conkycolors .
 #cp -rf ~/.xmonad/ .
 rm -rf .i3/
 cp -rf ~/.i3/ .
+#rm -rf .vim/
+#cp -rf ~/.vim .

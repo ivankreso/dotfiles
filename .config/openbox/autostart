@@ -33,6 +33,7 @@ synclient TapButton1=0 &
 nitrogen --restore &
 
 # Some effects
+#compton -cCGb
 compton --config ~/.compton.conf -b
 #cairo-compmgr &
 

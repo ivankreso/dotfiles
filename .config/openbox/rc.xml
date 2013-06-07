@@ -186,11 +186,17 @@
     <keybind key="C-A-Right">
       <action name="DesktopRight"/>
     </keybind>
-    <keybind key="C-A-h">
+    <keybind key="C-A-j">
       <action name="DesktopLeft"/>
     </keybind>
-    <keybind key="C-A-l">
+    <keybind key="C-A-k">
       <action name="DesktopRight"/>
+    </keybind>
+    <keybind key="W-C-j">
+      <action name="SendToDesktopLeft"/>
+    </keybind>
+    <keybind key="W-C-k">
+      <action name="SendToDesktopRight"/>
     </keybind>
     <keybind key="W-C-Left">
       <action name="SendToDesktopLeft"/>
@@ -200,7 +206,12 @@
     </keybind>
     <keybind key="W-m">
       <action name="Execute">
-        <command>wmctrl -r urxvt -b toggle,fullscreen</command>
+        <command>wmctrl -r urxvt -b toggle,maximized_horz,maximized_vert</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>mpc toggle</command>
       </action>
     </keybind>
     <keybind key="W-1">
