@@ -40,6 +40,7 @@ set tags+=/usr/include/opencv2/opencv_tags
 " Load standard tag files
 "set tags+=~/.vim/tags/cpp
 
+"au BufWritePost *.c,*.cpp,*.h silent! !ctags -R &
 
 " let Vundle manage Vundle
 " required!
@@ -51,7 +52,8 @@ Bundle 'gmarik/vundle'
 " Plugins to install/update with :BundleInstall/BundleUpdate
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
-"Bundle 'majutsushi/tagbar'
+Bundle 'majutsushi/tagbar'
+"Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'tpope/vim-commentary'
 "Bundle 'scrooloose/nerdcommenter'
@@ -62,6 +64,10 @@ Bundle 'scrooloose/syntastic'
 " others: vim-cpp (aur), pathogen
 
 filetype plugin indent on     " required!
+
+" latexsuite
+"set grepprg=grep\ -nH\ $*
+"let g:tex_flavor = "latex"
 
 " Needed for Syntax Highlighting and stuff
 "filetype on
@@ -85,6 +91,8 @@ set smartcase
 set autoindent
 " use intelligent indentation for C
 set smartindent
+" but disable it for python
+au! FileType python setl nosmartindent
 
 " tab options
 set shiftwidth=3
@@ -95,6 +103,10 @@ set expandtab
 "set smarttab - not needed
 " Enable mouse support in console
 set mouse=a
+map <ScrollWheelUp> <C-Y><C-Y>
+map <ScrollWheelDown> <C-E><C-E>
+"map <ScrollWheelUp> <C-U>
+"map <ScrollWheelDown> <C-D>
 " Line Numbers PWN!
 "set number
 set nonumber

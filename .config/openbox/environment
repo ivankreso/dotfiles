@@ -8,3 +8,8 @@
 
 # To set your keyboard layout, you need to modify your X config:
 # http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
+
+
+#export PYTHONPATH=$PYTHONPATH:/usr/lib/python2./site-packages - conflicts with python2 (both python3 and python2 use it...)
+#export PYTHON3PATH=$PYTHON3PATH:/usr/lib/python3.3/site-packages - wont work
+

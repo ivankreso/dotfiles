@@ -6,6 +6,11 @@
 				<execute>chromium</execute>
 			</action>
 		</item>
+		<item label="Thunderbird">
+			<action name="Execute">
+				<execute>thunderbird</execute>
+			</action>
+		</item>
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>urxvt -borderLess</execute>
@@ -49,11 +54,6 @@
 		<item label="System Monitor">
 			<action name="Execute">
 				<execute>gnome-system-monitor</execute>
-			</action>
-		</item>
-		<item label="Thunderbird">
-			<action name="Execute">
-				<execute>thunderbird</execute>
 			</action>
 		</item>
 		<item label="Clementine">

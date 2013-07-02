@@ -74,17 +74,17 @@
 
 TEXT
 # ..: CLOCK & CALENDAR :..
-${color d7d7d7}${offset 56}${voffset -1}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
+${color d7d7d7}${offset 56}${voffset -2}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
 
-${voffset -19}${offset 110}${font neuropol:size=20}${time %H:%M}${font}  ${voffset -3}${font Nimbus Mono L:size=9}$uptime
+${voffset -19}${offset 110}${font neuropol:size=20}${time %H:%M}${font}${voffset -3}${offset 20}${font Nimbus Mono L:size=9}$uptime
 ${voffset -5}${offset 110}${cpubar cpu6 0, 200}${voffset 2}${color1}
-${font Nimbus Mono L:size=8 style=bold}${color2}${alignc} ${exec date +%B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
+#${font Nimbus Mono L:size=8 style=bold}${color2}${alignc} ${exec date +%B\ %Y | sed 's/^.\| [a-z]/\U&/g'}
 #${offset 156}${color3}${execpi 60 JOUR=`date +%e`; cal | sed '1d' | sed 's/^/ /g' | sed /" $JOUR "/s/" $JOUR "/" "'${color 3273b5}'"$JOUR"'${color3}'" "/}
 # fixed calendar newlines bug
-${offset 156}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color red}'"$DJS"'$color'/ | sed ':a;N;$!ba;s/\n/\n${offset 156}/g'}
+${offset 156}${color3}${execpi 60 DJS=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DJS"'\b'/'\1${color red}'"$DJS"'$color'/ | sed ':a;N;$!ba;s/\n/\n${offset 156}/g'}
 
 #..: BATTERY :..
-${color d7d7d7}${offset 100}${voffset 4}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
+${color d7d7d7}${offset 100}${voffset 12}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
 ${offset 150}${voffset -10} ${font neuropol:size=20}${battery_percent BAT0}%${font Nimbus Mono L:size=8 style=bold}  Battery
 ${offset 160}${voffset -5}${cpubar cpu6 0, 150}${voffset 2}${color1}
 ${offset 160}..:: ${acpiacadapter} ::..
@@ -93,23 +93,23 @@ ${battery_time BAT0}
 #..: CPU USAGE :..
 #--- if you use a multi-core system, change values ---
 #--- in this case, you may cange position of objects (offset, voffset) ---
-${color d7d7d7}${offset 150}${voffset 6}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
+${color d7d7d7}${offset 150}${voffset 16}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
 ${offset 200}${font neuropol:size=20}${cpu cpu1}% ${font Nimbus Mono L:size=8 style=bold}Cpu
 ${offset 200}${font neuropol:size=20}${cpu cpu2}% ${font Nimbus Mono L:size=8 style=bold}Cpu 
 ${offset 200}${voffset -5}${cpubar cpu6 0, 110}${voffset 2}${color1}
-${offset 200}CpuT  ${execi 20 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-4 } °C
-${offset 200}CpuT  ${execi 20 sensors | grep "Core 2" | cut -d "+" -f2 | cut -c1-4 } °C
-
+${offset 200}CPU_1  ${execi 20 sensors | grep "Core 0" | cut -d "+" -f2 | cut -c1-4 } °C
+${offset 200}CPU_2  ${execi 20 sensors | grep "Core 2" | cut -d "+" -f2 | cut -c1-4 } °C
+${offset 200}GPU    ${execi 20 sensors | grep "temp1:" | cut -d "+" -f2 | cut -c1-4 | sed -n '2p'} °C
 
 #..: HARD DISK :..
 #--- correct to your partitions ---
-${color d7d7d7}${offset 100}${voffset -8}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
+${color d7d7d7}${offset 100}${voffset 8}${cpugraph cpu6 17,1}${voffset -3}${hr 2}${color3}
 ${offset 170}${font neuropol:size=20}$memperc% ${font Nimbus Mono L:size=8 style=bold} Ram
 ${offset 170}${voffset -5}${cpubar cpu6 0, 110}${voffset 2}${color1}
 ${offset 170}root   ${fs_free /} / ${fs_size /}
 ${offset 170}var    ${fs_free /var} / ${fs_size /var}
 ${offset 170}home   ${fs_free /home} / ${fs_size /home}
-${offset 170}tHD    ${exec sudo hddtemp /dev/sda | cut -c23-28}
+${offset 170}HDD    ${exec sudo hddtemp /dev/sda | cut -c24-28}
 
 
 

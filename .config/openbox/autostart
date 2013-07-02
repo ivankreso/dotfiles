@@ -3,10 +3,6 @@
 
 ######### BEGIN CUSTOM #########
 
-alias cmakedebug='cmake $1 -DCMAKE_BUILD_TYPE=DEBUG'
-alias cmakerelease='cmake $1 -DCMAKE_BUILD_TYPE=RELEASE'
-#alias nautilus="nautilus --no-desktop"
-#alias pacman="pacman-color"
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
 xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
@@ -39,7 +35,7 @@ compton --config ~/.compton.conf -b
 
 # Task bars
 #tint2 &	 - oldskul
-cairo-dock -c &
+cairo-dock -o &
 trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 
 # Desktop info

@@ -6,8 +6,6 @@
 # start tmux session
 [[ -z "$TMUX" ]] && exec tmux
 
-#PS1='[\u@\h \W]\$ '
-#PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]'
 
 export EDITOR="vim"
 export VISUAL=gvim
@@ -34,9 +32,16 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='1;32'
 
-#PATH=/home/kreso/Packages/mpich2-install/bin:$PATH;
-#export PATH
+#export PATH=/home/kreso/Packages/mpich2-install/bin:$PATH;
 #export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true"
+#export PYTHONPATH=$PYTHONPATH:/usr/lib/python3.3/site-packages      - conflicts with python2
+
+
+# aliases
+alias cmakedebug='cmake $1 -DCMAKE_BUILD_TYPE=Debug'
+alias cmakerelease='cmake $1 -DCMAKE_BUILD_TYPE=Release'
+#alias nautilus="nautilus --no-desktop"
+#alias pacman="pacman-color"
 
 if [ -t 0 -a -t 1 ]; then
     #kill flow control
