@@ -26,14 +26,14 @@
 				<execute>sonata</execute>
 			</action>
 		</item>
+		<item label="Transmission">
+			<action name="Execute">
+				<execute>transmission-gtk</execute>
+			</action>
+		</item>
 		<item label="Disks">
 			<action name="Execute">
 				<execute>gnome-disks</execute>
-			</action>
-		</item>
-		<item label="qBittorrent">
-			<action name="Execute">
-				<execute>qbittorrent</execute>
 			</action>
 		</item>
 		<item label="Speedcrunch">
@@ -64,6 +64,11 @@
 		<item label="PCManFM">
 			<action name="Execute">
 				<execute>pcmanfm</execute>
+			</action>
+		</item>
+		<item label="qBittorrent">
+			<action name="Execute">
+				<execute>qbittorrent</execute>
 			</action>
 		</item>
 		<item label="Firefox">

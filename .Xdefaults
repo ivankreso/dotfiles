@@ -7,7 +7,7 @@
 !URxvt.scrollstyle: rxvt
 !urxvt settings
 urxvt*depth:            32
-urxvt*geometry:         160x52
+urxvt*geometry:         140x42
 urxvt*saveLines:        65535
 urxvt*scrollTtyKeypress:true
 urxvt*scrollTtyOutput:  false

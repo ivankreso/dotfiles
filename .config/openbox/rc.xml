@@ -307,6 +307,11 @@
         <command>amixer -D pulse set Master 5%+ unmute</command>
       </action>
     </keybind>
+    <keybind key="Print">
+      <action name="Execute">
+        <command>gnome-screenshot</command>
+      </action>
+    </keybind>
     <keybind key="W-Down">
       <action name="Execute">
         <command>amixer -D pulse set Master 5%- unmute</command>
