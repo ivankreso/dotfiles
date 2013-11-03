@@ -36,6 +36,11 @@
 				<execute>gnome-disks</execute>
 			</action>
 		</item>
+		<item label="Remmina">
+			<action name="Execute">
+				<execute>remmina</execute>
+			</action>
+		</item>
 		<item label="Speedcrunch">
 			<action name="Execute">
 				<execute>speedcrunch</execute>

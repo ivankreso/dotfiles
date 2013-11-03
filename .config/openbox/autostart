@@ -57,5 +57,7 @@ thunar --daemon &
 
 #urxvtd &
 
+transmission-gtk --minimized &
+
 ######### END CUSTOM #########
 

@@ -5,7 +5,6 @@ if has("gui_running")
    "set guioptions+=a
    "set guioptions+=c
    set guioptions-=e
-
    set guioptions-=m  "remove menu bar
    set guioptions-=T  "remove toolbar
    set guioptions-=r  "remove right-hand scroll bar
@@ -87,12 +86,12 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Who doesn't like autoindent?
-set autoindent
-" use intelligent indentation for C
-set smartindent
+" Who doesn't like autoindent? - we dont need this any more
+" set autoindent
+" use intelligent indentation for C - this is deprecated if favor of cindent
+" set smartindent
 " but disable it for python
-au! FileType python setl nosmartindent
+" au! FileType python setl nosmartindent
 
 " tab options
 set shiftwidth=3
@@ -103,8 +102,8 @@ set expandtab
 "set smarttab - not needed
 " Enable mouse support in console
 set mouse=a
-map <ScrollWheelUp> <C-Y><C-Y>
-map <ScrollWheelDown> <C-E><C-E>
+"map <ScrollWheelUp> <C-Y><C-Y>
+"map <ScrollWheelDown> <C-E><C-E>
 "map <ScrollWheelUp> <C-U>
 "map <ScrollWheelDown> <C-D>
 " Line Numbers PWN!
@@ -112,7 +111,8 @@ map <ScrollWheelDown> <C-E><C-E>
 set nonumber
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=140
+set textwidth=120
+set colorcolumn=120
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -158,6 +158,17 @@ inoremap <C-l> <Right>
 "noremap <C-t> :TlistToggle<CR>
 "noremap <C-y> :TagbarToggle<CR>
 noremap <F8> :TagbarToggle<CR>
+
+" disable arrows for better learning curve
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
 
 " Cool tab completion stuff
 set wildmenu

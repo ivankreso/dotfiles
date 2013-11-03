@@ -107,16 +107,16 @@ function findexec() { find . -type f -iname '*'${1:-}'*' -exec ${2:-file} {} \;;
 
 
 #Different colors for remote server
-if [ -z "$SSH_TTY" ]; then
-    PS1="\[\033[36m\]antares\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
-else
-    PS1="\[\033[35m\]antares\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
-fi
 #if [ -z "$SSH_TTY" ]; then
-#    PS1="\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
+#    PS1="\[\033[36m\]antares\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
 #else
-#    PS1="\[\033[35m\]\u\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
+#    PS1="\[\033[35m\]antares\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
 #fi
+if [ -z "$SSH_TTY" ]; then
+    PS1="\[\033[36m\]\u\[\033[37m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]$ "
+else
+    PS1="\[\033[35m\]\u\[\033[37m\]@\[\033[31m\]\h:\[\033[34;1m\]\w\[\033[m\]$ "
+fi
 
 for f in '/usr/share/bash-completion/bash_completion' '/etc/bash_completion'; do
     if [ -e "$f" ]; then

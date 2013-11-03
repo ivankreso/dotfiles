@@ -11,7 +11,7 @@
 #run systemd as user instance
 #systemd --user &
 
-exec openbox-session
+exec dbus-launch openbox-session
 #exec xmonad
 #exec i3
 #exec ck-launch-session dbus-launch openbox-session
