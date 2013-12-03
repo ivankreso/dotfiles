@@ -15,6 +15,7 @@ cp ~/.gtkrc-2.0.mine .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp --parents /etc/samba/smb.conf .
+cp --parents /etc/systemd/logind.conf .
 
 rm -rf bin/
 cp -rf ~/bin/ .
