@@ -33,7 +33,7 @@
 		</item>
 		<item label="Spotify">
 			<action name="Execute">
-				<execute>spotify_admute.sh</execute>
+				<execute>~/Scripts/bin/spotify_admute.sh</execute>
 			</action>
 		</item>
 		<item label="Sonata">
