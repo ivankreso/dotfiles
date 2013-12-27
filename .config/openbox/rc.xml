@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -40,7 +39,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Surreal</name>
+    <name>Numix</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -58,7 +57,7 @@
       <name>snap</name>
       <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -67,25 +66,25 @@
       <name>snap</name>
       <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuHeader">
-      <name>GeosansLight</name>
-      <size>12</size>
+      <name>GeosansLight Medium</name>
+      <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
     </font>
     <font place="MenuItem">
-      <name>GeosansLight</name>
-      <size>11</size>
+      <name>GeosansLight Medium</name>
+      <size>10</size>
       <!-- font size in points -->
-      <weight>Bold</weight>
+      <weight>Normal</weight>
       <!-- 'bold' or 'normal' -->
       <slant>Normal</slant>
       <!-- 'italic' or 'normal' -->
@@ -121,10 +120,10 @@
     <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Work 1</name>
       <name>Main</name>
-      <name>Work 2</name>
+      <name>WorkRight</name>
       <name>Media</name>
+      <name>WorkLeft</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -193,6 +192,11 @@
     <keybind key="C-A-k">
       <action name="DesktopRight"/>
     </keybind>
+    <keybind key="C-A-v">
+      <action name="Execute">
+        <command>xdotool click 2</command>
+      </action>
+    </keybind>
     <keybind key="W-C-j">
       <action name="SendToDesktopLeft"/>
     </keybind>
@@ -217,6 +221,7 @@
     </keybind>
     <keybind key="W-1">
       <action name="SendToDesktop">
+        <desktop>1</desktop>
         <follow>no</follow>
       </action>
     </keybind>
@@ -330,12 +335,12 @@
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>~/bin/bright_down.sh</command>
+        <command>~/Scripts/bin/bright_down.sh</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>~/bin/bright_up.sh</command>
+        <command>~/Scripts/bin/bright_up.sh</command>
       </action>
     </keybind>
     <keybind key="XF86HomePage">

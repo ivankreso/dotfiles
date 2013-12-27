@@ -7,7 +7,7 @@ Setup
 * Window manager: Openbox
 * Terminal: Urxvt with tmux
 * Editor: Vim
-* Addons: Conky, Compton, Cairo-dock, Nitrogen, Slim
-* Music player: mpd with Sonata for frontend.
+* Addons: Conky, Xcompmgr, Cairo-dock, Nitrogen
+* Music player: mpd with Sonata for frontend
 
 
