@@ -21,6 +21,21 @@
 				<execute>thunar</execute>
 			</action>
 		</item>
+		<item label="Regexxer">
+			<action name="Execute">
+				<execute>regexxer</execute>
+			</action>
+		</item>
+		<item label="Clementine">
+			<action name="Execute">
+				<execute>clementine</execute>
+			</action>
+		</item>
+		<item label="Spotify">
+			<action name="Execute">
+				<execute>~/Scripts/bin/spotify_admute.sh</execute>
+			</action>
+		</item>
 		<item label="Sonata">
 			<action name="Execute">
 				<execute>sonata</execute>
@@ -59,11 +74,6 @@
 		<item label="System Monitor">
 			<action name="Execute">
 				<execute>gnome-system-monitor</execute>
-			</action>
-		</item>
-		<item label="Clementine">
-			<action name="Execute">
-				<execute>clementine</execute>
 			</action>
 		</item>
 		<item label="PCManFM">
@@ -478,17 +488,17 @@
 			</item>
 			<item label="Shutdown">
 				<action name="Execute">
-					<execute>~/bin/shutdown.sh</execute>
+					<execute>~/Scripts/bin/shutdown.sh</execute>
 				</action>
 			</item>
 			<item label="Reboot">
 				<action name="Execute">
-					<execute>~/bin/reboot.sh</execute>
+					<execute>~/Scripts/bin/reboot.sh</execute>
 				</action>
 			</item>
 			<item label="Hibernate">
 				<action name="Execute">
-					<execute>~/bin/hibernate.sh</execute>
+					<execute>~/Scripts/bin/hibernate.sh</execute>
 				</action>
 			</item>
 			<item label="Logout">

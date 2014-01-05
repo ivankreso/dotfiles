@@ -1,8 +1,0 @@
-.include /usr/lib/systemd/system/mpd.service
-
-[Unit]
-Description=Music Player Daemon (running as kreso)
-
-[Service]
-User=kreso
-PAMName=system-local-login

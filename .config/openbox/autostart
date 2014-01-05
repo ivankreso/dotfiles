@@ -30,8 +30,9 @@ nitrogen --restore &
 
 # Some effects
 #compton -cCGb
-compton --config ~/.compton.conf -b
+#compton --config ~/.compton.conf -b
 #cairo-compmgr &
+xcompmgr &
 
 # Task bars
 #tint2 &	 - oldskul
@@ -40,22 +41,27 @@ trayer --SetDockType false --SetPartialStrut false --expand true --widthtype req
 
 # Desktop info
 #conky -c /home/kreso/.conkycolors/conkyrc &
-conky -c ~/.conky/rings/conkyrc0 &
+#conky -c ~/.conky/rings/conkyrc0 &
 #xscreensaver --no-splash &
 gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
 # Tiling manager
 #pytyle &
-pytyle3 &
+#pytyle3 &
 
 # start music deamon
 #mpd
 
 # start thunar daemon
 thunar --daemon &
+# start urxvt daemon
+urxvtd &
 
-#urxvtd &
+nm-applet &
+batti &
+
+dropboxd &
 
 transmission-gtk --minimized &
 

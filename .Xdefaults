@@ -7,17 +7,18 @@
 !URxvt.scrollstyle: rxvt
 !urxvt settings
 urxvt*depth:            32
-urxvt*geometry:         140x42
+urxvt*geometry:         160x50
 urxvt*saveLines:        65535
 urxvt*scrollTtyKeypress:true
 urxvt*scrollTtyOutput:  false
 urxvt*scrollBar:        false
 urxvt*loginShell:       true
-urxvt*termName:         rxvt-unicode-256color
+!urxvt*termName:         rxvt-256color
+urxvt*termName:         xterm
 !urxvt*inheritPixmap:    true
 !urxvt*shading:          105
 !urxvt*tintColor:        #202222
-urxvt*font:             xft:Inconsolata:pixelsize=12
+urxvt*font:             xft:Inconsolata:pixelsize=13
 urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 urxvt*secondaryScroll:  true
 urxvt*perl-ext-common:  default,matcher
