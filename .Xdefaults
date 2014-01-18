@@ -9,10 +9,14 @@
 urxvt*depth:            32
 urxvt*geometry:         160x50
 urxvt*saveLines:        65535
-urxvt*scrollTtyKeypress:true
-urxvt*scrollTtyOutput:  false
 urxvt*scrollBar:        false
 urxvt*loginShell:       true
+! do not scroll with output
+urxvt*scrollTtyOutput: false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+urxvt*scrollWithBuffer: true
+! scroll back to the bottom on keypress
+urxvt*scrollTtyKeypress: true
 !urxvt*termName:         rxvt-256color
 urxvt*termName:         xterm
 !urxvt*inheritPixmap:    true
