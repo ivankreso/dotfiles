@@ -74,6 +74,8 @@ filetype plugin indent on     " required!
 "filetype plugin on
 syntax enable
 
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "high"
 set background=dark
 " Favorite colorscheme
 " ironman, desert, inkpot, neon, wombat256, zenburn, molokai
@@ -178,6 +180,8 @@ set wildmode=list:longest,full
 
 
 " rest is plugin options:
+
+
 
 " TagBar
 "let g:tagbar_autoshowtag = 1
