@@ -23,7 +23,7 @@ xset m 7 10 &     # Very Fast
 xset r rate 200 25 &
 
 # Disable tap on touchpad by default
-synclient TapButton1=0 &
+#synclient TapButton1=0 &
 
 # Wallpapers
 nitrogen --restore &
@@ -64,6 +64,7 @@ batti &
 dropboxd &
 
 transmission-gtk --minimized &
+rescuetime &
 
 ######### END CUSTOM #########
 

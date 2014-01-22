@@ -31,10 +31,11 @@ let maplocalleader = ","
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set tags=./tags;/
+"set tags=./tags;/
+"set tags+=~/.vim/tags/cpp
+"set tags+=/usr/include/opencv2/opencv_tags
+" example tags:
 "set tags=~/.vim/tags/cpp,tags,.tags,../tags,/usr/include/opencv2/opencv_tags
-set tags+=~/.vim/tags/cpp
-set tags+=/usr/include/opencv2/opencv_tags
 "set tags+=tags,/usr/include/opencv2/opencv_tags
 " Load standard tag files
 "set tags+=~/.vim/tags/cpp
@@ -52,12 +53,12 @@ Bundle 'gmarik/vundle'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
+Bundle 'altercation/vim-colors-solarized'
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'tpope/vim-commentary'
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'klen/python-mode'  - lose
-"Bundle 'altercation/solarized'
 "Bundle 'Lokaltog/TagHighlight'
 "Bundle 'xolox/vim-easytags'
 " others: vim-cpp (aur), pathogen
@@ -73,11 +74,14 @@ filetype plugin indent on     " required!
 "filetype plugin on
 syntax enable
 
+let g:solarized_contrast = "high"
+let g:solarized_visibility = "high"
+set background=dark
 " Favorite colorscheme
 " ironman, desert, inkpot, neon, wombat256, zenburn, molokai
-colorscheme molokai
+colorscheme solarized
+"colorscheme molokai
 "colorscheme darkerdesert
-set background=dark
 
 
 " search options
@@ -94,9 +98,9 @@ set smartcase
 " au! FileType python setl nosmartindent
 
 " tab options
-set shiftwidth=3
-set tabstop=3
-set softtabstop=3
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 " expand tabs to spaces
 set expandtab
 "set smarttab - not needed
@@ -112,7 +116,7 @@ set nonumber
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 set textwidth=120
-set colorcolumn=120
+set colorcolumn=115
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -176,6 +180,8 @@ set wildmode=list:longest,full
 
 
 " rest is plugin options:
+
+
 
 " TagBar
 "let g:tagbar_autoshowtag = 1

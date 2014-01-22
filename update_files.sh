@@ -1,23 +1,23 @@
 #!/bin/bash
 
 cp ~/.vimrc .
-cp ~/.xinitrc .
 cp ~/.bashrc .
 cp ~/.bash_profile .
-cp ~/.zshrc .
-cp ~/.tmux.conf .
 cp ~/.gitconfig .
-cp ~/.emacs .
-cp ~/.conkyrc .
-cp ~/.compton.conf . 
 cp ~/.gtkrc-2.0 .
-cp ~/.gtkrc-2.0.mine .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
 cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/fstab .
+#cp ~/.xinitrc .
+#cp ~/.tmux.conf .
+#cp ~/.emacs .
+#cp ~/.zshrc .
+#cp ~/.conkyrc .
+#cp ~/.compton.conf . 
+#cp ~/.gtkrc-2.0.mine .
 #cp --parents /usr/local/bin/rc.local .
 
 rm -rf .config/
