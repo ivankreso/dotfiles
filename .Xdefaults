@@ -1,6 +1,5 @@
 #include ".Xcolors"
 
-
 !urxvt*foreground:       #eee8d5
 !urxvt*background:       [85]#002b36
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm

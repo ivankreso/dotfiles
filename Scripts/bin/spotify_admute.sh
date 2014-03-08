@@ -7,7 +7,6 @@ ad=0 # if an ad is probably playing right now
 
 while true; do
     num=$(pactl list | grep -E '(^Sink Input)|(media.name = \"Spotify\"$)' | awk '/Spotify/ {print a} {a = $0}' | cut -c 13-)
-
     icon_name=$(xprop -name 'Spotify - Linux Preview' _NET_WM_ICON_NAME | cut -d \" -f 2)
     song_name=$(dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify / org.freedesktop.MediaPlayer2.GetMetadata | grep xesam:title -A 1 | grep variant | cut -d \" -f 2)
 

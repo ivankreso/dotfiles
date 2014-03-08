@@ -7,7 +7,7 @@
 #
 # August 2012
 
-BRIGHT_INCREMENT=10
+BRIGHT_INCREMENT=1
 MIN_BRIGHT=0
 
 read MAX_BRIGHT < /sys/class/backlight/acpi_video0/max_brightness

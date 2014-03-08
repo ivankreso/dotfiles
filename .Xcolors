@@ -53,8 +53,6 @@
 *color7:  #dedede
 *color15: #f2f2f2
 
-
-
 ! Solarized color scheme for the X Window System
 ! Common
 #define S_yellow        #b58900

@@ -21,24 +21,9 @@
 				<execute>thunar</execute>
 			</action>
 		</item>
-		<item label="Regexxer">
-			<action name="Execute">
-				<execute>regexxer</execute>
-			</action>
-		</item>
 		<item label="Clementine">
 			<action name="Execute">
 				<execute>clementine</execute>
-			</action>
-		</item>
-		<item label="Spotify">
-			<action name="Execute">
-				<execute>~/Scripts/bin/spotify_admute.sh</execute>
-			</action>
-		</item>
-		<item label="Sonata">
-			<action name="Execute">
-				<execute>sonata</execute>
 			</action>
 		</item>
 		<item label="Transmission">
@@ -61,11 +46,6 @@
 				<execute>speedcrunch</execute>
 			</action>
 		</item>
-		<item label="gVim">
-			<action name="Execute">
-				<execute>gvim</execute>
-			</action>
-		</item>
 		<item label="Network">
 			<action name="Execute">
 				<execute>gnome-control-center network</execute>
@@ -76,19 +56,14 @@
 				<execute>gnome-system-monitor</execute>
 			</action>
 		</item>
-		<item label="PCManFM">
-			<action name="Execute">
-				<execute>pcmanfm</execute>
-			</action>
-		</item>
-		<item label="qBittorrent">
-			<action name="Execute">
-				<execute>qbittorrent</execute>
-			</action>
-		</item>
 		<item label="Firefox">
 			<action name="Execute">
 				<execute>firefox</execute>
+			</action>
+		</item>
+		<item label="Sonata">
+			<action name="Execute">
+				<execute>sonata</execute>
 			</action>
 		</item>
 		<separator/>

@@ -10,6 +10,8 @@ cp ~/.Xcolors .
 cp ~/.valgrindrc .
 cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
+cp --parents /etc/systemd/system/fixwlan-suspend.service .
+cp --parents /etc/systemd/system/fixwlan-resume.service .
 cp --parents /etc/fstab .
 #cp ~/.xinitrc .
 #cp ~/.tmux.conf .

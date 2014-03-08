@@ -1,0 +1,11 @@
+[Unit]
+Description=Local system resume actions
+After=suspend.target                                                            
+                                                                                
+[Service]                                                                       
+Type=oneshot
+ExecStart=/sbin/modprobe r8712u ; /usr/bin/systemctl start network.target
+
+[Install]
+WantedBy=suspend.target
+

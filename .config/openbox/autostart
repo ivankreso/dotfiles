@@ -5,12 +5,14 @@
 
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
-xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
+#xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
+
 setxkbmap -layout hr us
 #setxkbmap -layout hr
 
 # Map caps lock to esc
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+#xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+setxkbmap -option caps:escape
 
 # Mouse control
 xset m 7 10 &     # Very Fast
@@ -35,8 +37,9 @@ nitrogen --restore &
 xcompmgr &
 
 # Task bars
-#tint2 &	 - oldskul
+#tint2 &    - oldskul
 cairo-dock -o &
+
 trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 
 # Desktop info
@@ -47,7 +50,6 @@ gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
 # Tiling manager
-#pytyle &
 #pytyle3 &
 
 # start music deamon
@@ -55,16 +57,16 @@ gnome-screensaver &
 
 # start thunar daemon
 thunar --daemon &
-# start urxvt daemon
-urxvtd &
 
 nm-applet &
-batti &
+redshiftgui &
+parcellite &
 
 dropboxd &
 
+#urxvtd &
+
 transmission-gtk --minimized &
-rescuetime &
 
 ######### END CUSTOM #########
 

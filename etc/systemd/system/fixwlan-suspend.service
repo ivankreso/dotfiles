@@ -1,0 +1,11 @@
+[Unit]
+Description=Local system suspend actions
+Before=sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemctl stop network.target ; /usr/bin/rmmod r8712u
+
+[Install]
+WantedBy=sleep.target
+

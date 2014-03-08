@@ -23,7 +23,7 @@ set termencoding=utf-8
 
 " set <leader> to , (default is \)
 let mapleader = ","
-"let maplocalleader = ","
+let maplocalleader = ","
 
 "au BufNewFile,BufRead *.cpp set syntax=cpp11
 
@@ -242,7 +242,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
-"let g:miniBufExplForceSyntaxEnable = 0 
+"let g:miniBufExplForceSyntaxEnable = 0
 "let g:miniBufExplSplitBelow = 0
 "let g:miniBufExplMapWindowNavVim = 1
 "let g:miniBufExplMaxSize = 0
@@ -252,13 +252,6 @@ let g:miniBufExplModSelTarget = 1
 
 " show hidden files in nerdtree
 let NERDTreeShowHidden=1
-
-" Syntastic options
-let g:syntastic_cpp_check_header = 1
-"let g:syntastic_cpp_include_dirs = ['../include','include']
-let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
-"let g:syntastic_cpp_checker = ['ycm']
-"let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
 " youcompleteme options
 set completeopt=menu
@@ -270,6 +263,16 @@ let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.p
 "let g:ycm_register_as_syntastic_checker = 0
 "set updatetime=4000
 "let g:ycm_allow_changing_updatetime = 0
+
+" Syntastic options - paths are handled by YCM
+let g:syntastic_cpp_check_header = 1
+"let g:syntastic_cpp_include_dirs = ['../include','include']
+"let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
+"let b:syntastic_cpp_cflags = '-I/usr/include/pcl-1.7'
+let g:syntastic_cpp_checker = ['ycm']
+"let g:syntastic_cpp_checker = ['gcc']
+"let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
 
 "set tags=./tags;/
 "set tags+=~/.vim/tags/cpp
