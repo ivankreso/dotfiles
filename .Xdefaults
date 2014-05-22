@@ -22,7 +22,7 @@ urxvt*termName:         xterm
 !urxvt*inheritPixmap:    true
 !urxvt*shading:          105
 !urxvt*tintColor:        #202222
-urxvt*font:             xft:Inconsolata:pixelsize=13
+urxvt*font:             xft:Inconsolata:pixelsize=11
 urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 urxvt*secondaryScroll:  true
 urxvt*perl-ext-common:  default,matcher

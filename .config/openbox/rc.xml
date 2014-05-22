@@ -179,6 +179,12 @@
     <keybind key="C-A-Left">
       <action name="DesktopLeft"/>
     </keybind>
+    <keybind key="C-A-Up">
+      <action name="Move"/>
+    </keybind>
+    <keybind key="C-A-Down">
+      <action name="MoveRelative"/>
+    </keybind>
     <keybind key="C-A-T">
       <action name="Execute">
         <command>urxvt -borderLess</command>
@@ -187,10 +193,10 @@
     <keybind key="C-A-Right">
       <action name="DesktopRight"/>
     </keybind>
-    <keybind key="C-A-j">
+    <keybind key="C-A-h">
       <action name="DesktopLeft"/>
     </keybind>
-    <keybind key="C-A-k">
+    <keybind key="C-A-l">
       <action name="DesktopRight"/>
     </keybind>
     <keybind key="C-A-v">
@@ -334,16 +340,6 @@
         <command>dmenu_run</command>
       </action>
     </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_down.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_up.sh</command>
-      </action>
-    </keybind>
     <keybind key="XF86HomePage">
       <action name="Execute">
         <command>~/bin/bright_down.sh</command>
@@ -352,16 +348,6 @@
     <keybind key="XF86Mail">
       <action name="Execute">
         <command>~/bin/bright_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="Execute">
-        <command>~/bin/redshift_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F7">
-      <action name="Execute">
-        <command>~/bin/redshift_down.sh</command>
       </action>
     </keybind>
     <keybind key="A-F2">
@@ -374,23 +360,26 @@
         <command>synclient TapButton1=1</command>
       </action>
     </keybind>
+    <keybind key="A-m">
+      <action name="MoveToCenter"/>
+    </keybind>
+    <keybind key="A-r">
+      <action name="Resize"/>
+    </keybind>
+    <keybind key="A-F8">
+      <action name="ToggleShade"/>
+    </keybind>
     <keybind key="A-F9">
-      <action name="Execute">
-        <command>xrandr --output LVDS --mode 1366x768 --primary --output HDMI-0 --off</command>
-      </action>
+      <action name="ToggleMaximizeHorz"/>
     </keybind>
     <keybind key="A-F10">
-      <action name="Execute">
-        <command>xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768</command>
-      </action>
+      <action name="ToggleMaximizeVert"/>
     </keybind>
     <keybind key="A-F11">
-      <action name="Execute">
-        <command>xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off</command>
-      </action>
+      <action name="Iconify"/>
     </keybind>
     <keybind key="A-F12">
-      <action name="ToggleFullscreen"/>
+      <action name="ToggleMaximizeFull"/>
     </keybind>
     <keybind key="S-A-Up">
       <action name="GrowToEdgeNorth"/>

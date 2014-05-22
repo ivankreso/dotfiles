@@ -5,7 +5,7 @@
 
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
-xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
+#xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
 setxkbmap -layout hr us
 #setxkbmap -layout hr
 
@@ -58,13 +58,17 @@ thunar --daemon &
 # start urxvt daemon
 urxvtd &
 
-nm-applet &
-batti &
+#nm-applet &
+#batti &
+xfce4-power-manager &
 
-dropboxd &
+#dropboxd &
+parcellite &
 
 transmission-gtk --minimized &
-rescuetime &
+#rescuetime &
+
+#eval `ssh-agent -s` &
 
 ######### END CUSTOM #########
 

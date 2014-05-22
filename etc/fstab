@@ -6,7 +6,7 @@
 UUID=cf125454-7794-436d-86ef-a88648d15a6b	/         	ext4      	rw,relatime,data=ordered	0 1
 
 # /dev/sdc1
-UUID=c32f27aa-1556-47fc-8328-ecb4d389a3db	/home     	ext4      	rw,relatime,data=ordered	0 2
+UUID=208fd1e8-d924-4e2a-bc78-7313b894cac6	/home     	ext4      	rw,relatime,data=ordered	0 2
 
 # /dev/sdc2
 UUID=9788fe23-b7e1-434c-b4f3-0c4c079c7a9d	/var      	ext4      	rw,relatime,data=ordered	0 2
@@ -17,5 +17,10 @@ UUID=61A7-1B65      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,cod
 # /dev/sdc3
 UUID=38a286a9-fa76-492a-b5dc-de33c72caa00	none      	swap      	defaults  	0 0
 
+# SSD settings
+#/dev/sda1  /boot       ext4   defaults,noatime,discard   0  1
+#/dev/sda2  /           ext4   defaults,noatime,discard   0  2
+
+
 # melian/shared
-//melian.zemris.fer.hr/shared /home/kivan/Network/samba/melian cifs users,username=kivan 0 0
+#//melian.zemris.fer.hr/shared /home/kivan/Network/samba/melian cifs users,username=kivan 0 0

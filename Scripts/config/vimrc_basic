@@ -69,11 +69,6 @@ set noswapfile
 set nobackup
 set nowb
 
-
-" Swap ; and :  Convenient.
-nnoremap ; :
-nnoremap : ;
-
 " Reselect visual block after indent/outdent
 vnoremap < <gv
 vnoremap > >gv

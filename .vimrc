@@ -13,7 +13,7 @@ if has("gui_running")
    " Maximize gvim window.
    set lines=58 columns=160
    " set font for gvim
-   set guifont=Inconsolata\ Medium\ 10
+   set guifont=Inconsolata\ Medium\ 9.5
 endif
 
 " set utf-8 encoding
@@ -86,8 +86,9 @@ set expandtab                                                " expand tabs to sp
 set ignorecase                                               " case-insensitive search
 set incsearch                                                " search as you type
 set laststatus=2                                             " always show statusline
-set list                                                     " show trailing whitespace
-set listchars=tab:▸\ ,trail:▫
+"set list                                                     " show trailing whitespace
+"set listchars=tab:▸\ ,trail:▫
+
 "set number                                                   " show line numbers
 set ruler                                                    " show where you are
 set scrolloff=3                                              " show context above/below cursorline
@@ -118,8 +119,8 @@ set mouse=a
 "map <ScrollWheelDown> <C-D>
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=120
-set colorcolumn=115
+set textwidth=130
+set colorcolumn=120
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -147,6 +148,9 @@ nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" clear the whitespaces
+nmap <leader>cw :%s/\s\+$//<CR>
 
 " in case you forgot to sudo
 cmap w!! %!sudo tee > /dev/null %
