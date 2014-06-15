@@ -1,6 +1,8 @@
 #!/bin/bash
 
 cp ~/.vimrc .
+cp ~/.zshrc .
+cp ~/.zprofile .
 cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.gitconfig .

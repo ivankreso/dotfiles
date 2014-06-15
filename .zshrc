@@ -1,162 +1,80 @@
-. /usr/share/zsh/site-contrib/powerline.zsh
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to disable command auto-correction.
+# DISABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git git-extras git-flow archlinux common-aliases)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export PATH="/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/mpirt/bin/intel64:/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/bin/intel64_mic:/opt/intel/composerxe/debugger/gui/intel64:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/intel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='gvim'
+fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 
-#PROMPT="%{$fg[red]%} » %{$reset_color%}"
-#RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
-
-[[ -t 1 ]] || return
-case $TERM in
-	*xterm*|*rxvt*|(dt|k|E|a)term)
-		preexec () {
-			print -Pn "\e]2;$1\a"    # edited; %n@%m omitted, as I know who and where I am
-		}
-		;;
-	screen*)
-		preexec () {
-			print -Pn "\e\"$1\e\134"
-		}
-		;; 
-esac
-
-setopt AUTO_CD
-setopt CORRECT
-setopt completealiases
-setopt append_history
-setopt share_history
-setopt hist_verify
-setopt hist_ignore_all_dups
-export HISTFILE="${HOME}"/.zsh-history
-export HISTSIZE=1000000
-export SAVEHIST=$HISTSIZE
-
-
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors 'reply=( "=(#b)(*$VAR)(?)*=00=$color[green]=$color[bg-green]" )'
-zstyle ':completion:*:*:*:*:hosts' list-colors '=*=30;41'
-zstyle ':completion:*:*:*:*:users' list-colors '=*=$color[green]=$color[red]'
-zstyle ':completion:*' menu select
-
-bindkey -v
-bindkey '^R' history-incremental-search-backward
-bindkey "^j" history-beginning-search-backward
-bindkey "^k" history-beginning-search-forward
-
-
-
-function open() { xdg-open $1 &> /dev/null &disown; }
-function lt() { ls -ltrsa "$@" | tail; }
-function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
-function fname() { find . -iname "*$@*"; }
-
-conf() {
-	case $1 in
-		xmonad)		vim ~/.xmonad/xmonad.hs ;;
-		conky)		vim ~/.xmonad/.conky_dzen ;;
-		homepage)	olddir=$(pwd) && cd ~/scripts/homepage.py && vim homepage.py && ./homepage.py; cd $olddir ;;
-		menu)		vim ~/scripts/menu ;;
-		mpd)		vim ~/.mpdconf ;;
-		mutt)		vim ~/.mutt/acct/wei001 ;;
-		ncmpcpp)	vim ~/.ncmpcpp/config ;;
-		pacman)		svim /etc/pacman.conf ;;
-		ranger)		vim ~/.config/ranger/rc.conf ;;
-		rifle)		vim ~/.config/ranger/rifle.conf ;;
-		tmux)		vim ~/.tmux.conf ;;
-		vim)		vim ~/.vimrc ;;
-		xinit)		vim ~/.xinitrc ;;
-		xresources)	vim ~/.Xresources && xrdb ~/.Xresources ;;
-		zathura)	vim ~/.config/zathura/zathurarc ;;
-		theme2)		vim ~/.themes/FlatStudioCustom/gtk-2.0/gtkrc ;;
-		theme3)		vim ~/.themes/FlatStudioCustom/gtk-3.0/gtk.css ;;
-		gtk2)		vim ~/.gtkrc-2.0 ;;
-		gtk3)		vim ~/.config/gtk-3.0/settings.ini ;;
-			tint2)		vim ~/.config/tint2/xmonad.tint2rc ;;
-		zsh)		vim ~/.zshrc && source ~/.zshrc ;;
-		*)			echo "Unknown application: $1" ;;
-	esac
-}
-
-function music()
-{
-	sudo mount /dev/sda1/ ~/mount/
-	sleep 1
-	mpd
-	sleep 0.5
-	mpdscribble
-	sleep 3
-	ncmpcpp
-}
-
-# Pamcman Aliases
-# alias pacman='pacman'
-# Sudo alias 
-alias svim='sudo vim' 
-
-# Programs
-alias installfont='sudo fc-cache -f -v'
-alias bool='espresso -o eqntott'
-#alias compton='compton -cCfF -I 0.065 -O 0.065 -D 6' 
-#alias compton='compton -cCGfF -o 0.38 -O 200 -I 200 -t 0.02 -l 0.02 -r 3.2 -D2 -m 0.88'
-alias scrot="scrot -q100  -d 5"
-alias alsamixer="alsamixer -g"
-alias equalizer="alsamixer -D equal"
-alias mysqlt="mysql -u root -p cargo_science"
-alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm; /home/sunn/scripts/dwm-status;'
-
-# Scripts
-alias temps='~/scripts/temps.sh'
-alias color='~/scripts/colors'
-alias screenfetch='~/scripts/screenfetch-dev'
-alias tumblrcat='~/scripts/tumblrcat'
-alias jazzget='~/scripts/jazzget'
-alias tag='~/scripts/tag'
-alias installed='~/scripts/installed'
-
-# Shortcuts
-#alias rm='rm -i'
-alias rmi='rm -i'
-#alias mv='mv -i'
-alias c='xsel -ib'
-alias emac='emacs -nw'
-alias h='history | tail'
-alias hg='history | grep '
-alias ch='chmod 755 '
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
-alias ']'='open'
-alias ll='ls -alF'
-alias la='ls -A'
-alias lla='ls -lA'
-alias l='ls -CF'
-alias vi='vim'
-
-# tar aliases
-alias tarzip='unzip'
-alias tarx='tar -xvf'
-alias targz='tar -zxvf'
-alias tarbz2='tar -jxvf'
-
-#alias mkdir and cd
-function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
-function cdl () { cd "$@" && ls; }
-
-# Bookmarks
-
-# enable color support of ls and also add handy aliases
-alias ls='ls --color=auto'
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-
-set -o noclobber
-set -o vi
-
-
-# MUTT BG fix
-COLORFGBG="default;default"
-
-export EDITOR="vim"
+# My config
+export EDITOR="gvim"
+export QT_STYLE_OVERRIDE=gtk
+eval $(ssh-agent -s) > /dev/null

@@ -14,6 +14,7 @@ if has("gui_running")
    set lines=58 columns=160
    " set font for gvim
    set guifont=Inconsolata\ Medium\ 9.5
+   "set guifont=Inconsolata\ Medium\ 10
 endif
 
 " set utf-8 encoding
@@ -61,10 +62,12 @@ filetype plugin indent on
 
 let g:solarized_contrast = "high"
 let g:solarized_visibility = "high"
-set background=dark
 " Favorite colorscheme
 " ironman, desert, inkpot, neon, wombat256, zenburn, molokai
+
+"set background=dark
 colorscheme solarized
+
 "colorscheme molokai
 "colorscheme darkerdesert
 
@@ -148,6 +151,9 @@ nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
 nmap <leader>c <Plug>Kwbd
 map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" TODO enable this
+"nmap <leader>bd :bp | sp | bn | bd
 
 " clear the whitespaces
 nmap <leader>cw :%s/\s\+$//<CR>

@@ -28,15 +28,17 @@ xset r rate 200 25 &
 # Wallpapers
 nitrogen --restore &
 
+cairo-dock -o &
+
 # Some effects
 #compton -cCGb
 #compton --config ~/.compton.conf -b
 #cairo-compmgr &
-xcompmgr &
+#xcompmgr &
+compton -C &
 
 # Task bars
 #tint2 &	 - oldskul
-cairo-dock -o &
 trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 
 # Desktop info
@@ -64,6 +66,8 @@ xfce4-power-manager &
 
 #dropboxd &
 parcellite &
+
+skype &
 
 transmission-gtk --minimized &
 #rescuetime &
