@@ -6,11 +6,12 @@
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
-setxkbmap -layout hr us
-#setxkbmap -layout hr
+#setxkbmap -layout hr us
+#setxkbmap -rules evdev -model pc104 -layout hr us -option caps:escape
+setxkbmap -layout hr us -option caps:escape
 
-# Map caps lock to esc
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+# Map caps lock to esc - not needed now
+#xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
 
 # Mouse control
 xset m 7 10 &     # Very Fast
@@ -73,6 +74,8 @@ transmission-gtk --minimized &
 #rescuetime &
 
 #eval `ssh-agent -s` &
+
+redshiftgui &
 
 ######### END CUSTOM #########
 

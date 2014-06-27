@@ -34,20 +34,18 @@ syntax enable
 filetype on
 filetype off                   " required!
 
-" let Vundle manage Vundle
-" required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-
+Plugin 'gmarik/vundle'
 " Plugins to install/update with :BundleInstall/BundleUpdate
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
 
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'tpope/vim-commentary'
@@ -57,7 +55,8 @@ Bundle 'kien/ctrlp.vim'
 "Bundle 'xolox/vim-easytags'
 " others: vim-cpp (aur), pathogen
 
-" ensure ftdetect et al work by including this after the Vundle stuff
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype plugin indent on
 
 let g:solarized_contrast = "high"
