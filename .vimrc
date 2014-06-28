@@ -34,20 +34,18 @@ syntax enable
 filetype on
 filetype off                   " required!
 
-" let Vundle manage Vundle
-" required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-
+Plugin 'gmarik/vundle'
 " Plugins to install/update with :BundleInstall/BundleUpdate
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kien/ctrlp.vim'
 
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'tpope/vim-commentary'
@@ -57,24 +55,16 @@ Bundle 'kien/ctrlp.vim'
 "Bundle 'xolox/vim-easytags'
 " others: vim-cpp (aur), pathogen
 
-" ensure ftdetect et al work by including this after the Vundle stuff
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
 filetype plugin indent on
 
 let g:solarized_contrast = "high"
 let g:solarized_visibility = "high"
 set background=dark
 " Favorite colorscheme
-" ironman, desert, inkpot, neon, wombat256, zenburn, molokai
 colorscheme solarized
 "colorscheme molokai
-"colorscheme darkerdesert
-
-" Who doesn't like autoindent? - we dont need this any more
-" set autoindent
-" use intelligent indentation for C - this is deprecated if favor of cindent
-" set smartindent
-" but disable it for python
-" au! FileType python setl nosmartindent
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
@@ -157,17 +147,6 @@ let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
 "let g:gitgutter_enabled = 0
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-"if executable('ag')
-"  let g:ackprg = 'ag --nogroup --column'
-"
-"  " Use Ag over Grep
-"  set grepprg=ag\ --nogroup\ --nocolor
-"
-"  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-"  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-"endif
-
 " fdoc is yaml
 autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
 " md is markdown
@@ -192,14 +171,6 @@ endif
 " disable autocomments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set formatoptions-=cro
-
-" ----------Key shortcuts-----------
-" NERDtree toggle - no recursive map needed
-"noremap <C-b> :NERDTreeToggle<CR>
-"noremap <F8> :TagbarToggle<CR>
-
-"noremap <C-t> :TlistToggle<CR>
-"noremap <C-y> :TagbarToggle<CR>
 
 " Reselect visual block after indent/outdent
 vnoremap < <gv
