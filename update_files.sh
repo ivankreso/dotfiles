@@ -6,10 +6,10 @@ cp ~/.zprofile .
 cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.gitconfig .
-cp ~/.gtkrc-2.0 .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
+cp --parents ~/.config/gtk-3.0/settings.ini .
 cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/systemd/system/fixwlan-suspend.service .
