@@ -49,6 +49,8 @@ trayer --SetDockType false --SetPartialStrut false --expand true --widthtype req
 gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
+xfce4-power-manager &
+
 # Tiling manager
 #pytyle3 &
 
@@ -58,15 +60,17 @@ gnome-screensaver &
 # start thunar daemon
 thunar --daemon &
 
-nm-applet &
-redshiftgui &
+#nm-applet &
+#redshiftgui &
 parcellite &
 
 dropboxd &
 
+skype &
+
 #urxvtd &
 
-transmission-gtk --minimized &
+#transmission-gtk --minimized &
 
 ######### END CUSTOM #########
 

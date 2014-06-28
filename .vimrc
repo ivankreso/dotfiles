@@ -10,6 +10,7 @@ if has("gui_running")
    set guioptions-=r  "remove right-hand scroll bar
    set guioptions-=l
    set guioptions-=L
+   set guiheadroom=0
    " Maximize gvim window.
    set lines=58 columns=160
    " set font for gvim
@@ -119,7 +120,7 @@ set mouse=a
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 set textwidth=120
-set colorcolumn=115
+set colorcolumn=120
 " highlight matching braces
 set showmatch
 " intelligent comments

@@ -1,13 +1,11 @@
 My Linux dotfiles
 ------------------------
 
-Setup
------
+Setup:
+------
 * Distro: Arch Linux
 * Window manager: Openbox
-* Terminal: Urxvt with tmux
+* Shell: Zsh
+* Terminal: Urxvt
 * Editor: Vim
-* Addons: Xcompmgr, Cairo-dock, Nitrogen, Conky
-* Music player: mpd with Sonata for frontend
-
-
+* Addons: Compton, Cairo-dock, Nitrogen, Conky

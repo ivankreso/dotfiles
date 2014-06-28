@@ -16,34 +16,9 @@
 				<execute>urxvt -borderLess</execute>
 			</action>
 		</item>
-		<item label="Thunar">
-			<action name="Execute">
-				<execute>thunar</execute>
-			</action>
-		</item>
-		<item label="Clementine">
-			<action name="Execute">
-				<execute>clementine</execute>
-			</action>
-		</item>
-		<item label="Transmission">
-			<action name="Execute">
-				<execute>transmission-gtk</execute>
-			</action>
-		</item>
 		<item label="Disks">
 			<action name="Execute">
 				<execute>gnome-disks</execute>
-			</action>
-		</item>
-		<item label="Remmina">
-			<action name="Execute">
-				<execute>remmina</execute>
-			</action>
-		</item>
-		<item label="Speedcrunch">
-			<action name="Execute">
-				<execute>speedcrunch</execute>
 			</action>
 		</item>
 		<item label="Network">
@@ -54,6 +29,111 @@
 		<item label="System Monitor">
 			<action name="Execute">
 				<execute>gnome-system-monitor</execute>
+			</action>
+		</item>
+		<menu id="root-menu-3410" label="Config">
+			<item label="Obconf">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item label="Obmenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="Obkey">
+				<action name="Execute">
+					<execute>obkey</execute>
+				</action>
+			</item>
+			<item label="Lxappearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item label="Arandr">
+				<action name="Execute">
+					<execute>arandr</execute>
+				</action>
+			</item>
+			<item label="Tint2conf">
+				<action name="Execute">
+					<execute>tint2conf</execute>
+				</action>
+			</item>
+			<item label="Tint Wizard">
+				<action name="Execute">
+					<execute>tintwizard</execute>
+				</action>
+			</item>
+			<item label="Nitrogen">
+				<action name="Execute">
+					<execute>nitrogen</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="root-menu-323159" label="Keyboard">
+			<item label="US with Croatian">
+				<action name="Execute">
+					<execute>setxkbmap hr us</execute>
+				</action>
+			</item>
+			<item label="Croatian">
+				<action name="Execute">
+					<execute>setxkbmap hr</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="40" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<separator/>
+			<item label="Suspend">
+				<action name="Execute">
+					<execute>systemctl suspend</execute>
+				</action>
+			</item>
+			<item label="Shutdown">
+				<action name="Execute">
+					<execute>~/Scripts/bin/shutdown.sh</execute>
+				</action>
+			</item>
+			<item label="Reboot">
+				<action name="Execute">
+					<execute>~/Scripts/bin/reboot.sh</execute>
+				</action>
+			</item>
+			<item label="Hibernate">
+				<action name="Execute">
+					<execute>~/Scripts/bin/hibernate.sh</execute>
+				</action>
+			</item>
+			<item label="Logout">
+				<action name="Exit"/>
+			</item>
+		</menu>
+		<separator/>
+		<item label="Clementine">
+			<action name="Execute">
+				<execute>clementine</execute>
+			</action>
+		</item>
+		<item label="Transmission">
+			<action name="Execute">
+				<execute>transmission-gtk</execute>
+			</action>
+		</item>
+		<item label="Remmina">
+			<action name="Execute">
+				<execute>remmina</execute>
+			</action>
+		</item>
+		<item label="Speedcrunch">
+			<action name="Execute">
+				<execute>speedcrunch</execute>
 			</action>
 		</item>
 		<item label="Firefox">
@@ -395,90 +475,6 @@
 				</action>
 			</item>
 		</menu>
-		<menu id="root-menu-323159" label="Keyboard">
-			<item label="US with Croatian">
-				<action name="Execute">
-					<execute>setxkbmap hr us</execute>
-				</action>
-			</item>
-			<item label="Croatian">
-				<action name="Execute">
-					<execute>setxkbmap hr</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="root-menu-3410" label="Config">
-			<item label="Obconf">
-				<action name="Execute">
-					<execute>obconf</execute>
-				</action>
-			</item>
-			<item label="Obmenu">
-				<action name="Execute">
-					<execute>obmenu</execute>
-				</action>
-			</item>
-			<item label="Obkey">
-				<action name="Execute">
-					<execute>obkey</execute>
-				</action>
-			</item>
-			<item label="Lxappearance">
-				<action name="Execute">
-					<execute>lxappearance</execute>
-				</action>
-			</item>
-			<item label="Arandr">
-				<action name="Execute">
-					<execute>arandr</execute>
-				</action>
-			</item>
-			<item label="Tint2conf">
-				<action name="Execute">
-					<execute>tint2conf</execute>
-				</action>
-			</item>
-			<item label="Tint Wizard">
-				<action name="Execute">
-					<execute>tintwizard</execute>
-				</action>
-			</item>
-			<item label="Nitrogen">
-				<action name="Execute">
-					<execute>nitrogen</execute>
-				</action>
-			</item>
-		</menu>
 		<separator/>
-		<menu id="40" label="OpenBox">
-			<menu id="client-list-menu"/>
-			<item label="Reconfigure">
-				<action name="Reconfigure"/>
-			</item>
-			<separator/>
-			<item label="Suspend">
-				<action name="Execute">
-					<execute>systemctl suspend</execute>
-				</action>
-			</item>
-			<item label="Shutdown">
-				<action name="Execute">
-					<execute>~/Scripts/bin/shutdown.sh</execute>
-				</action>
-			</item>
-			<item label="Reboot">
-				<action name="Execute">
-					<execute>~/Scripts/bin/reboot.sh</execute>
-				</action>
-			</item>
-			<item label="Hibernate">
-				<action name="Execute">
-					<execute>~/Scripts/bin/hibernate.sh</execute>
-				</action>
-			</item>
-			<item label="Logout">
-				<action name="Exit"/>
-			</item>
-		</menu>
 	</menu>
 </openbox_menu>

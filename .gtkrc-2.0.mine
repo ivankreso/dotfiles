@@ -1,8 +1,0 @@
-gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-menu=16,16:gtk-large-toolbar=16,16:gtk-small-toolbar=16,16:gtk-button=16,16"
-
-style "eclipse_fix"
-{
-base[ACTIVE] = shade(0.7, "#4283d3")
-}
-
-class "GtkTreeView" style "eclipse_fix"
