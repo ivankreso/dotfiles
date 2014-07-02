@@ -320,16 +320,6 @@
         <command>gnome-screenshot</command>
       </action>
     </keybind>
-    <keybind key="W-Down">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%- unmute</command>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%+ unmute</command>
-      </action>
-    </keybind>
     <keybind key="A-d">
       <action name="Execute">
         <command>dmenu_run</command>
@@ -376,17 +366,30 @@
     <keybind key="A-F12">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="S-A-Up">
-      <action name="GrowToEdgeNorth"/>
+    <keybind key="W-Up">
+      <action name="MaximizeFull"/>
     </keybind>
-    <keybind key="S-A-Right">
-      <action name="GrowToEdgeEast"/>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
     </keybind>
     <keybind key="S-A-Down">
       <action name="GrowToEdgeSouth"/>
     </keybind>
-    <keybind key="S-A-Left">
-      <action name="GrowToEdgeWest"/>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <width>50%</width>
+      </action>
     </keybind>
   </keyboard>
   <mouse>

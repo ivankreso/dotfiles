@@ -13,7 +13,7 @@ if has("gui_running")
    " Maximize gvim window.
    set lines=58 columns=160
    " set font for gvim
-   set guifont=Inconsolata\ Medium\ 9.5
+   set guifont=Inconsolata\ Medium\ 10
    "set guifont=Inconsolata\ Medium\ 10
 endif
 

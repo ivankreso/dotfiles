@@ -68,7 +68,7 @@ xfce4-power-manager &
 #dropboxd &
 parcellite &
 
-skype &
+#skype &
 
 transmission-gtk --minimized &
 #rescuetime &
