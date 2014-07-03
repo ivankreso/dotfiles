@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -205,11 +204,6 @@
     <keybind key="W-C-Right">
       <action name="SendToDesktopRight"/>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <command>wmctrl -r urxvt -b toggle,maximized_horz,maximized_vert</command>
-      </action>
-    </keybind>
     <keybind key="W-1">
       <action name="SendToDesktop">
         <desktop>1</desktop>
@@ -276,26 +270,17 @@
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>kfmclient openProfile filemanagement</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
+    <keybind key="AudioMute">
       <action name="Execute">
         <command>amixer set Master toggle</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioLowerVolume">
+    <keybind key="AudioLowerVolume">
       <action name="Execute">
         <command>amixer -D pulse set Master 5%- unmute</command>
       </action>
     </keybind>
-    <keybind key="XF86AudioRaiseVolume">
+    <keybind key="AudioRaiseVolume">
       <action name="Execute">
         <command>amixer -D pulse set Master 5%+ unmute</command>
       </action>
@@ -305,75 +290,88 @@
         <command>gnome-screenshot</command>
       </action>
     </keybind>
-    <keybind key="W-Down">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%- unmute</command>
+    <keybind key="W-A-m">
+      <action name="UnmaximizeFull"/>
+    </keybind>
+    <keybind key="W-m">
+      <action name="MaximizeFull"/>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
       </action>
     </keybind>
     <keybind key="W-Up">
-      <action name="Execute">
-        <command>amixer -D pulse set Master 5%+ unmute</command>
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>50%</width>
+        <height>50%</height>
       </action>
     </keybind>
     <keybind key="A-d">
       <action name="Execute">
         <command>dmenu_run</command>
       </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_down.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86HomePage">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_down.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86Mail">
-      <action name="Execute">
-        <command>~/Scripts/bin/bright_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F5">
-      <action name="Execute">
-        <command>~/Scripts/bin/redshift_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F6">
-      <action name="Execute">
-        <command>~/Scripts/bin/redshift_down.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F10">
-      <action name="Execute">
-        <command>xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768</command>
-      </action>
-    </keybind>
-    <keybind key="A-F11">
-      <action name="Execute">
-        <command>xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off</command>
-      </action>
-    </keybind>
-    <keybind key="A-F12">
-      <action name="ToggleFullscreen"/>
-    </keybind>
-    <keybind key="S-A-Up">
-      <action name="GrowToEdgeNorth"/>
-    </keybind>
-    <keybind key="S-A-Right">
-      <action name="GrowToEdgeEast"/>
-    </keybind>
-    <keybind key="S-A-Down">
-      <action name="GrowToEdgeSouth"/>
-    </keybind>
-    <keybind key="S-A-Left">
-      <action name="GrowToEdgeWest"/>
     </keybind>
   </keyboard>
   <mouse>
