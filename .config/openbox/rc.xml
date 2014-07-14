@@ -178,7 +178,7 @@
     <keybind key="C-A-Left">
       <action name="DesktopLeft"/>
     </keybind>
-    <keybind key="C-A-T">
+    <keybind key="W-t">
       <action name="Execute">
         <command>urxvt -borderLess</command>
       </action>

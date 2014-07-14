@@ -34,7 +34,8 @@ nitrogen --restore &
 #compton -cCGb
 #compton --config ~/.compton.conf -b
 #cairo-compmgr &
-xcompmgr &
+#xcompmgr &
+compton -C &
 
 # Task bars
 #tint2 &    - oldskul
@@ -66,7 +67,7 @@ parcellite &
 
 dropboxd &
 
-skype &
+#skype &
 
 #urxvtd &
 
