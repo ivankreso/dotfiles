@@ -14,7 +14,7 @@ if has("gui_running")
    set lines=58 columns=160
    " set font for gvim
    set guifont=Inconsolata\ Medium\ 10
-   "set guifont=Inconsolata\ Medium\ 10
+   "set guifont=mplus\ Medium\ 6
 endif
 
 " set utf-8 encoding
@@ -46,6 +46,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
+Plugin 'davidhalter/jedi-vim'
 
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'tpope/vim-commentary'
@@ -121,8 +122,8 @@ set mouse=a
 "map <ScrollWheelDown> <C-D>
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
-set textwidth=130
-set colorcolumn=120
+"set textwidth=150
+set colorcolumn=115
 " highlight matching braces
 set showmatch
 " intelligent comments

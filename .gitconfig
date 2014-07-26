@@ -21,3 +21,5 @@
 	trustExitCode = false
 [diff]
 	external = meld
+[push]
+	default = simple

@@ -117,13 +117,14 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>4</number>
+    <number>5</number>
     <firstdesk>1</firstdesk>
     <names>
-      <name>Main</name>
       <name>Work1</name>
       <name>Work2</name>
       <name>Work3</name>
+      <name>Work4</name>
+      <name>Work5</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -178,13 +179,7 @@
     <keybind key="C-A-Left">
       <action name="DesktopLeft"/>
     </keybind>
-    <keybind key="C-A-Up">
-      <action name="Move"/>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="MoveRelative"/>
-    </keybind>
-    <keybind key="C-A-T">
+    <keybind key="W-t">
       <action name="Execute">
         <command>urxvt -borderLess</command>
       </action>
@@ -215,16 +210,6 @@
     <keybind key="W-C-Right">
       <action name="SendToDesktopRight"/>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <command>wmctrl -r urxvt -b toggle,maximized_horz,maximized_vert</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioPlay">
-      <action name="Execute">
-        <command>mpc toggle</command>
-      </action>
-    </keybind>
     <keybind key="W-1">
       <action name="SendToDesktop">
         <desktop>1</desktop>
@@ -249,7 +234,7 @@
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-d">
+    <keybind key="W-s">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="W-l">
@@ -291,15 +276,6 @@
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <command>kfmclient openProfile filemanagement</command>
-        <startupnotify>
-          <enabled>yes</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-      </action>
-    </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>amixer set Master toggle</command>
@@ -320,75 +296,59 @@
         <command>gnome-screenshot</command>
       </action>
     </keybind>
-    <keybind key="A-d">
+    <keybind key="W-d">
       <action name="Execute">
         <command>dmenu_run</command>
       </action>
     </keybind>
-    <keybind key="XF86HomePage">
-      <action name="Execute">
-        <command>~/bin/bright_down.sh</command>
-      </action>
-    </keybind>
-    <keybind key="XF86Mail">
-      <action name="Execute">
-        <command>~/bin/bright_up.sh</command>
-      </action>
-    </keybind>
-    <keybind key="A-F2">
-      <action name="Execute">
-        <command>synclient TapButton1=0</command>
-      </action>
-    </keybind>
-    <keybind key="A-F3">
-      <action name="Execute">
-        <command>synclient TapButton1=1</command>
-      </action>
-    </keybind>
-    <keybind key="A-m">
-      <action name="MoveToCenter"/>
-    </keybind>
-    <keybind key="A-r">
-      <action name="Resize"/>
-    </keybind>
-    <keybind key="A-F8">
-      <action name="ToggleShade"/>
-    </keybind>
-    <keybind key="A-F9">
-      <action name="ToggleMaximizeHorz"/>
-    </keybind>
-    <keybind key="A-F10">
-      <action name="ToggleMaximizeVert"/>
-    </keybind>
-    <keybind key="A-F11">
-      <action name="Iconify"/>
-    </keybind>
-    <keybind key="A-F12">
+    <keybind key="W-m">
       <action name="ToggleMaximizeFull"/>
     </keybind>
     <keybind key="W-Up">
-      <action name="MaximizeFull"/>
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
     </keybind>
     <keybind key="W-Down">
       <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>50%</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
     </keybind>
     <keybind key="S-A-Down">
       <action name="GrowToEdgeSouth"/>
     </keybind>
     <keybind key="W-Right">
       <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
         <x>50%</x>
+        <y>0</y>
         <width>50%</width>
+        <height>100%</height>
       </action>
     </keybind>
     <keybind key="W-Left">
       <action name="UnmaximizeFull"/>
-      <action name="MaximizeVert"/>
       <action name="MoveResizeTo">
         <x>0</x>
+        <y>0</y>
         <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-W">
+      <action name="ShowMenu"/>
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute">
+        <command>dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause</command>
       </action>
     </keybind>
   </keyboard>

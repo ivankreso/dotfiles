@@ -6,7 +6,6 @@ cp ~/.zprofile .
 cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.gitconfig .
-cp ~/.gtkrc-2.0 .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
@@ -19,7 +18,6 @@ cp --parents /etc/fstab .
 #cp ~/.zshrc .
 #cp ~/.conkyrc .
 #cp ~/.compton.conf . 
-#cp ~/.gtkrc-2.0.mine .
 #cp --parents /usr/local/bin/rc.local .
 
 rm -rf .config/

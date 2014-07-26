@@ -29,7 +29,9 @@ xset r rate 200 25 &
 # Wallpapers
 nitrogen --restore &
 
-cairo-dock -o &
+#cairo-dock -o &
+plank &
+volwheel &
 
 # Some effects
 #compton -cCGb
@@ -49,33 +51,27 @@ trayer --SetDockType false --SetPartialStrut false --expand true --widthtype req
 gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
-# Tiling manager
-#pytyle &
-#pytyle3 &
-
-# start music deamon
-#mpd
 
 # start thunar daemon
 thunar --daemon &
 # start urxvt daemon
-urxvtd &
+#urxvtd &
 
 #nm-applet &
 #batti &
 xfce4-power-manager &
 
 #dropboxd &
-parcellite &
+#parcellite &
 
 #skype &
 
-transmission-gtk --minimized &
+#transmission-gtk --minimized &
 #rescuetime &
 
 #eval `ssh-agent -s` &
 
-redshiftgui &
+#redshiftgui &
 
 ######### END CUSTOM #########
 

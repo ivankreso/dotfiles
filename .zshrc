@@ -75,6 +75,14 @@ fi
 
 
 # My config
+export PATH=$PATH:/home/kivan/.gem/ruby/2.1.0/bin/
+export LD_LIBRARY_PATH=/usr/local/atlas/lib/
 export EDITOR="gvim"
 export QT_STYLE_OVERRIDE=gtk
 eval $(ssh-agent -s) > /dev/null
+# clang still lacks OpenMP
+#export CC=/usr/bin/clang
+#export CXX=/usr/bin/clang++
+
+# dont share history across all terminals
+unsetopt share_history

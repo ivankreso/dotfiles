@@ -30,9 +30,10 @@ urxvt*urlLauncher:      /usr/bin/chromium
 urxvt*matcher.button:   1
 urxvt*xftAntialias:     true
 urxvt*borderless:       false
-urxvt*internalBorder:   0
+urxvt*internalBorder:   5
 urxvt*externalBorder:   0
 urxvt*imLocale:         en_US.UTF-8
+urxvt*iconFile:         /usr/share/icons/Numix-Circle/32x32/applications/terminal.svg
 
 !xterm settings
 xterm*dynamicColors:    true
