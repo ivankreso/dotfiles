@@ -31,6 +31,11 @@
 				<execute>gnome-system-monitor</execute>
 			</action>
 		</item>
+		<item label="Nautilus">
+			<action name="Execute">
+				<execute>nautilus</execute>
+			</action>
+		</item>
 		<item label="Clementine">
 			<action name="Execute">
 				<execute>clementine</execute>

@@ -7,12 +7,9 @@
 #xrandr --output HDMI-0 --primary --mode 1920x1080
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
 
-setxkbmap -layout hr us
-#setxkbmap -layout hr
-
+setxkbmap -layout hr us -option caps:escape
 # Map caps lock to esc
 #xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
-setxkbmap -option caps:escape
 
 # Mouse control
 xset m 7 10 &     # Very Fast
@@ -23,9 +20,6 @@ xset m 7 10 &     # Very Fast
 
 # Keyboard speed control
 xset r rate 200 25 &
-
-# Disable tap on touchpad by default
-#synclient TapButton1=0 &
 
 # Wallpapers
 nitrogen --restore &
@@ -38,38 +32,24 @@ nitrogen --restore &
 compton -C &
 
 # Task bars
-#tint2 &    - oldskul
-cairo-dock -o &
+#cairo-dock -o &
+plank &
 
 trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 
 # Desktop info
 #conky -c /home/kreso/.conkycolors/conkyrc &
 #conky -c ~/.conky/rings/conkyrc0 &
-#xscreensaver --no-splash &
 gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
-xfce4-power-manager &
-
-# Tiling manager
-#pytyle3 &
-
-# start music deamon
-#mpd
-
-# start thunar daemon
-thunar --daemon &
+#xfce4-power-manager &
 
 #nm-applet &
-#redshiftgui &
-parcellite &
-
-dropboxd &
+#parcellite &
+volwheel &
 
 #skype &
-
-#urxvtd &
 
 #transmission-gtk --minimized &
 
