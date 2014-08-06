@@ -291,6 +291,16 @@
         <command>amixer -D pulse set Master 5%+ unmute</command>
       </action>
     </keybind>
+    <keybind key="W-F6">
+      <action name="Execute">
+        <command>xbacklight -10</command>
+      </action>
+    </keybind>
+    <keybind key="W-F7">
+      <action name="Execute">
+        <command>xbacklight +10</command>
+      </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <command>gnome-screenshot</command>

@@ -71,7 +71,7 @@ xfce4-power-manager &
 
 #eval `ssh-agent -s` &
 
-#redshiftgui &
+redshiftgui &
 
 ######### END CUSTOM #########
 
