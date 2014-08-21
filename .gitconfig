@@ -23,3 +23,5 @@
 	external = meld
 [push]
 	default = simple
+[alias]
+	autopush = ! git add -A && git commit -m \"auto_commit\" && git push

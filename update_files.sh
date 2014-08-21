@@ -21,7 +21,8 @@ cp --parents /etc/fstab .
 #cp --parents /usr/local/bin/rc.local .
 
 rm -rf .config/
-mkdir .config
+mkdir -p .config/gtk-3.0/
+cp ~/.config/gtk-3.0/settings.ini .config/gtk-3.0/settings.ini
 cp -rf ~/.config/openbox .config/openbox
 rm -rf Scripts/
 cp -rf ~/Scripts/ .

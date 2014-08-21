@@ -23,6 +23,9 @@ xset m 7 10 &     # Very Fast
 # Keyboard speed control
 xset r rate 200 25 &
 
+# Disable buggy power saving
+xset -dpms
+
 # Disable tap on touchpad by default
 #synclient TapButton1=0 &
 

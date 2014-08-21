@@ -204,7 +204,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " ----------Key shortcuts-----------
 " NERDtree toggle - no recursive map needed
-"noremap <C-b> :NERDTreeToggle<CR>
+noremap <C-b> :NERDTreeToggle<CR>
 "noremap <F8> :TagbarToggle<CR>
 
 "noremap <C-t> :TlistToggle<CR>
