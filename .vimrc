@@ -135,10 +135,6 @@ endif
 
 " keyboard shortcuts
 "let mapleader = ','
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
 map <leader>l :Align
 nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
@@ -214,15 +210,15 @@ noremap <C-b> :NERDTreeToggle<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-" Easy split navigation
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
-
 " unlock Ctrl+j from bash so we can map it to move cursor in insert mode
+" not working anymore :(
 "let g:BASH_Ctrl_j = 'off'
 "let g:C_Ctrl_j = 'off'
+" Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 "" Easy cursor navigation in insert mode
 "inoremap <C-h> <Left>
 "inoremap <C-j> <Down>
@@ -291,3 +287,8 @@ let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.p
 "set tags+=~/.vim/tags/cpp
 
 "au BufWritePost *.c,*.cpp,*.h silent! !ctags -R &
+
+"Set the following lines in your ~/.vimrc or the systemwide /etc/vimrc:
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor = "latex"
+

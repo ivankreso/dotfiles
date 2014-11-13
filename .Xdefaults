@@ -6,7 +6,7 @@
 ! scrollbar style - rxvt (default), plain (most compact), next, or xterm
 !URxvt.scrollstyle: rxvt
 !urxvt settings
-urxvt*depth:            32
+!urxvt*depth:            32
 urxvt*geometry:         160x50
 urxvt*saveLines:        65535
 urxvt*scrollBar:        false
@@ -22,7 +22,7 @@ urxvt*termName:         xterm
 !urxvt*inheritPixmap:    true
 !urxvt*shading:          105
 !urxvt*tintColor:        #202222
-urxvt*font:             xft:Inconsolata:pixelsize=11
+urxvt*font:             xft:Inconsolata:pixelsize=12
 urxvt*print-pipe:       cat > $(echo urxvt.dump.$(date +'%Y%M%d%H%m%S'))
 urxvt*secondaryScroll:  true
 urxvt*perl-ext-common:  default,matcher
@@ -33,7 +33,8 @@ urxvt*borderless:       false
 urxvt*internalBorder:   5
 urxvt*externalBorder:   0
 urxvt*imLocale:         en_US.UTF-8
-urxvt*iconFile:         /usr/share/icons/Numix-Circle/32x32/applications/terminal.svg
+urxvt*iconFile:         /usr/share/icons/Numix-Circle/48x48/applications/terminal.svg
+
 
 !xterm settings
 xterm*dynamicColors:    true

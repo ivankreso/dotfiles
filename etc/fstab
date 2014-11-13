@@ -21,6 +21,7 @@ UUID=38a286a9-fa76-492a-b5dc-de33c72caa00	none      	swap      	defaults  	0 0
 #/dev/sda1  /boot       ext4   defaults,noatime,discard   0  1
 #/dev/sda2  /           ext4   defaults,noatime,discard   0  2
 
-
-# melian/shared
+# samba shares
 #//melian.zemris.fer.hr/shared /home/kivan/Network/samba/melian cifs users,username=kivan 0 0
+#//elbereth.zemris.fer.hr/shared /home/kivan/Network/elbereth/shared/ cifs users,username=kivan 0 0
+

@@ -5,6 +5,7 @@ cp ~/.zshrc .
 cp ~/.zprofile .
 cp ~/.bashrc .
 cp ~/.bash_profile .
+cp ~/.screenrc .
 cp ~/.gitconfig .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .

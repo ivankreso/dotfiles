@@ -75,16 +75,21 @@ fi
 
 
 # My config
+# ---------
+# dont share history across all terminals
+unsetopt share_history
+
 export PATH=$PATH:/home/kivan/.gem/ruby/2.1.0/bin/
 export LD_LIBRARY_PATH=/usr/local/atlas/lib/:/home/kivan/Projects/caffe/build/lib/:LD_LIBRARY_PATH
 export EDITOR="gvim"
 export QT_STYLE_OVERRIDE=gtk
-source /opt/intel/composerxe/bin/compilervars.sh intel64
 
-eval $(ssh-agent -s) > /dev/null
+# dont - this messes with the g++ default paths
+#source /opt/intel/composerxe/bin/compilervars.sh intel64
+
+#eval $(ssh-agent -s) > /dev/null
+
 # clang still lacks OpenMP
 #export CC=/usr/bin/clang
 #export CXX=/usr/bin/clang++
 
-# dont share history across all terminals
-unsetopt share_history
