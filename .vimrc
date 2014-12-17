@@ -24,7 +24,20 @@ set termencoding=utf-8
 
 " set <leader> to , (default is \)
 let mapleader = ","
+map <Space> <Leader>
+"let mapleader = " "
+"let mapleader="\<space>"
 "let maplocalleader = ","
+
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+nmap <Leader><Leader> V
 
 "au BufNewFile,BufRead *.cpp set syntax=cpp11
 
@@ -38,8 +51,8 @@ filetype off                   " required!
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
 " Plugins to install/update with :BundleInstall/BundleUpdate
+Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
@@ -47,6 +60,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'bling/vim-airline'
 
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'tpope/vim-commentary'
@@ -190,9 +204,9 @@ else
 endif
 
 " ================ Turn Off Swap Files ==============
-"set noswapfile
-"set nobackup
-"set nowb
+set noswapfile
+set nobackup
+set nowb
 
 " disable autocomments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -235,7 +249,31 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+nnoremap <CR> G
+nnoremap <BS> gg
+
+" Quickly select text you just pasted:
+noremap gV `[v`]
+" Stop that stupid window from popping up
+map q: :q
+
+
+" Prevent replacing paste buffer on paste vp doesn't replace paste buffer
+function! RestoreRegister()
+  let @" = s:restore_reg
+  return ''
+endfunction
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+vmap <silent> <expr> p <sid>Repl()
+
+
+" -------------------------------------------
 " rest is plugin options:
+
+"let g:airline#extensions#tabline#enabled = 1
 
 " TagBar
 "let g:tagbar_autoshowtag = 1
@@ -292,3 +330,6 @@ let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.p
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0

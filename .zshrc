@@ -50,12 +50,13 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git git-extras git-flow archlinux common-aliases)
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH="/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/mpirt/bin/intel64:/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/bin/intel64_mic:/opt/intel/composerxe/debugger/gui/intel64:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/intel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -93,3 +94,8 @@ export QT_STYLE_OVERRIDE=gtk
 #export CC=/usr/bin/clang
 #export CXX=/usr/bin/clang++
 
+export PYTHONPATH="/usr/lib/python2.7/site-packages"
+source /opt/ros/indigo/setup.zsh
+
+unset GREP_OPTIONS
+alias ssh="ssh -Y"

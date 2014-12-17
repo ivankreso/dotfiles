@@ -13,7 +13,7 @@
 		</item>
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>urxvt -borderLess</execute>
+				<execute>urxvt --borderLess</execute>
 			</action>
 		</item>
 		<item label="Thunar">
@@ -44,6 +44,11 @@
 		<item label="Network">
 			<action name="Execute">
 				<execute>gnome-control-center network</execute>
+			</action>
+		</item>
+		<item label="Power Manager">
+			<action name="Execute">
+				<execute>xfce4-power-manager-settings</execute>
 			</action>
 		</item>
 		<item label="System Monitor">

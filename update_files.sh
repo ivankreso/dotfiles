@@ -3,6 +3,7 @@
 cp ~/.vimrc .
 cp ~/.zshrc .
 cp ~/.zprofile .
+cp ~/.tmux.conf .
 cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.screenrc .
@@ -14,9 +15,7 @@ cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/fstab .
 #cp ~/.xinitrc .
-#cp ~/.tmux.conf .
 #cp ~/.emacs .
-#cp ~/.zshrc .
 #cp ~/.conkyrc .
 #cp ~/.compton.conf . 
 #cp --parents /usr/local/bin/rc.local .

@@ -181,7 +181,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>urxvt -borderLess</command>
+        <command>urxvt --borderLess</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
