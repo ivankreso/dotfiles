@@ -6,6 +6,7 @@
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
+xrandr --output LVDS1 --mode 1600x900 --pos 1920x540 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 #setxkbmap -layout hr us
 #setxkbmap -rules evdev -model pc104 -layout hr us -option caps:escape
 setxkbmap -layout hr us -option caps:escape
@@ -24,7 +25,7 @@ xset m 7 10 &     # Very Fast
 xset r rate 200 25 &
 
 # Disable buggy power saving
-xset -dpms
+#xset -dpms
 
 # Disable tap on touchpad by default
 #synclient TapButton1=0 &
@@ -44,8 +45,8 @@ volwheel &
 compton -C &
 
 # Task bars
-#tint2 &	 - oldskul
-trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
+#trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
+#trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 --height 200 &
 
 # Desktop info
 #conky -c /home/kreso/.conkycolors/conkyrc &

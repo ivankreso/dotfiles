@@ -172,14 +172,14 @@
 			</item>
 		</menu>
 		<menu id="root-menu-323159" label="Keyboard">
-			<item label="US with Croatian">
+			<item label="US">
 				<action name="Execute">
-					<execute>setxkbmap hr us</execute>
+					<execute>setxkbmap -layout hr us -option caps:escape</execute>
 				</action>
 			</item>
 			<item label="Croatian">
 				<action name="Execute">
-					<execute>setxkbmap hr</execute>
+					<execute>setxkbmap -layout hr -option caps:escape</execute>
 				</action>
 			</item>
 		</menu>
