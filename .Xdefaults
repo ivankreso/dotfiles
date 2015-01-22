@@ -35,7 +35,6 @@ urxvt*externalBorder:   0
 urxvt*imLocale:         en_US.UTF-8
 urxvt*iconFile:         /usr/share/icons/Numix-Circle/48x48/applications/terminal.svg
 
-
 !xterm settings
 xterm*dynamicColors:    true
 xterm*utf8:             2

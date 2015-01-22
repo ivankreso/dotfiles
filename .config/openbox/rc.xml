@@ -234,8 +234,13 @@
         <follow>no</follow>
       </action>
     </keybind>
-    <keybind key="W-s">
+    <keybind key="W-C-s">
       <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <command>gnome-control-center sound</command>
+      </action>
     </keybind>
     <keybind key="W-l">
       <action name="Execute">
@@ -314,6 +319,9 @@
     <keybind key="W-m">
       <action name="ToggleMaximizeFull"/>
     </keybind>
+    <keybind key="W-o">
+      <action name="ToggleOmnipresent"/>
+    </keybind>
     <keybind key="W-Up">
       <action name="UnmaximizeFull"/>
       <action name="MoveResizeTo">
@@ -384,6 +392,21 @@
     <keybind key="A-Left">
       <action name="MoveResizeTo">
         <monitor>next</monitor>
+      </action>
+    </keybind>
+    <keybind key="A-F10">
+      <action name="Execute">
+        <command>xrandr --output LVDS1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal</command>
+      </action>
+    </keybind>
+    <keybind key="A-F11">
+      <action name="Execute">
+        <command>xrandr --output LVDS1 --mode 1600x900 --pos 1920x540 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal</command>
+      </action>
+    </keybind>
+    <keybind key="A-F12">
+      <action name="Execute">
+        <command>xrandr --output LVDS1 --mode 1600x900 --pos 0x0 --rotate normal --output VGA1 --off</command>
       </action>
     </keybind>
   </keyboard>

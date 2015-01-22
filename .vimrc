@@ -15,6 +15,11 @@ if has("gui_running")
    " set font for gvim
    set guifont=Inconsolata\ Medium\ 10
    "set guifont=mplus\ Medium\ 6
+else
+  " for console
+  set t_Co=256
+  set background=dark
+  colorscheme atom-dark-256
 endif
 
 " set utf-8 encoding
@@ -53,6 +58,7 @@ call vundle#begin()
 
 " Plugins to install/update with :BundleInstall/BundleUpdate
 Plugin 'gmarik/Vundle.vim'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
@@ -61,6 +67,8 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'bling/vim-airline'
+Plugin 'gosukiwi/vim-atom-dark'
+"Plugin 'flazz/vim-colorschemes'
 
 "Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'tpope/vim-commentary'
@@ -78,12 +86,14 @@ let g:solarized_contrast = "high"
 let g:solarized_visibility = "high"
 " Favorite colorscheme
 " ironman, desert, inkpot, neon, wombat256, zenburn, molokai
-
-"set background=dark
-colorscheme solarized
-
 "colorscheme molokai
 "colorscheme darkerdesert
+if has("gui_running")
+  "let g:solarized_contrast = "high"
+  "let g:solarized_visibility = "high"
+  "colorscheme solarized
+  colorscheme atom-dark
+endif
 
 " Who doesn't like autoindent? - we dont need this any more
 " set autoindent

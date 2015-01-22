@@ -11,6 +11,31 @@
 				<execute>thunderbird</execute>
 			</action>
 		</item>
+		<item label="Network">
+			<action name="Execute">
+				<execute>gnome-control-center network</execute>
+			</action>
+		</item>
+		<item label="Sound Settings">
+			<action name="Execute">
+				<execute>gnome-control-center sound</execute>
+			</action>
+		</item>
+		<item label="Power Manager">
+			<action name="Execute">
+				<execute>xfce4-power-manager-settings</execute>
+			</action>
+		</item>
+		<item label="System Monitor">
+			<action name="Execute">
+				<execute>gnome-system-monitor</execute>
+			</action>
+		</item>
+		<item label="Disks">
+			<action name="Execute">
+				<execute>gnome-disks</execute>
+			</action>
+		</item>
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>urxvt --borderLess</execute>
@@ -34,26 +59,6 @@
 		<item label="Transmission">
 			<action name="Execute">
 				<execute>transmission-gtk</execute>
-			</action>
-		</item>
-		<item label="Disks">
-			<action name="Execute">
-				<execute>gnome-disks</execute>
-			</action>
-		</item>
-		<item label="Network">
-			<action name="Execute">
-				<execute>gnome-control-center network</execute>
-			</action>
-		</item>
-		<item label="Power Manager">
-			<action name="Execute">
-				<execute>xfce4-power-manager-settings</execute>
-			</action>
-		</item>
-		<item label="System Monitor">
-			<action name="Execute">
-				<execute>gnome-system-monitor</execute>
 			</action>
 		</item>
 		<item label="Firefox">

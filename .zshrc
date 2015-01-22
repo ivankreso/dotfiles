@@ -94,8 +94,9 @@ export QT_STYLE_OVERRIDE=gtk
 #export CC=/usr/bin/clang
 #export CXX=/usr/bin/clang++
 
-export PYTHONPATH="/usr/lib/python2.7/site-packages"
-source /opt/ros/indigo/setup.zsh
+#export PYTHONPATH="/usr/lib/python2.7/site-packages"
+#source /opt/ros/indigo/setup.zsh
 
 unset GREP_OPTIONS
 alias ssh="ssh -Y"
+alias yaourt_update="yaourt --noconfirm -Syua"

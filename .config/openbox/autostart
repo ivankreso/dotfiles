@@ -3,10 +3,15 @@
 
 ######### BEGIN CUSTOM #########
 
+# Dual monitor
+#xrandr --output LVDS1 --mode 1600x900 --pos 1920x540 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+# Single monitor
+xrandr --output LVDS1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --off
 #xrandr --output HDMI-0 --primary --mode 1920x1080
 #xrandr --output HDMI-0 --primary --mode 1920x1080 --output LVDS --mode 1366x768
-xrandr --output LVDS1 --mode 1600x900 --pos 1920x540 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
 #setxkbmap -layout hr us
 #setxkbmap -rules evdev -model pc104 -layout hr us -option caps:escape
 setxkbmap -layout hr us -option caps:escape
