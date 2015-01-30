@@ -62,12 +62,14 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'bling/vim-airline'
+" Colorschemes
 Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'flazz/vim-colorschemes'
 
 "Bundle 'fholgado/minibufexpl.vim'
@@ -92,6 +94,7 @@ if has("gui_running")
   "let g:solarized_contrast = "high"
   "let g:solarized_visibility = "high"
   "colorscheme solarized
+  "colorscheme base16-default
   colorscheme atom-dark
 endif
 
