@@ -19,7 +19,6 @@ else
   " for console
   set t_Co=256
   set background=dark
-  colorscheme atom-dark-256
 endif
 
 " set utf-8 encoding
@@ -58,44 +57,54 @@ call vundle#begin()
 
 " Plugins to install/update with :BundleInstall/BundleUpdate
 Plugin 'gmarik/Vundle.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/a.vim'
+Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'bling/vim-airline'
-" Colorschemes
+"Plugin 'davidhalter/jedi-vim'
+
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'flazz/vim-colorschemes'
 
-"Bundle 'fholgado/minibufexpl.vim'
-"Bundle 'tpope/vim-commentary'
-"Bundle 'scrooloose/nerdcommenter'
-"Bundle 'klen/python-mode'  - lose
-"Bundle 'Lokaltog/TagHighlight'
-"Bundle 'xolox/vim-easytags'
-" others: vim-cpp (aur), pathogen
+" Track the engine.
+"Plugin 'ervandew/supertab'
+"Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+"Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on
 
-let g:solarized_contrast = "high"
-let g:solarized_visibility = "high"
+"" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+"
+"" better key bindings for UltiSnipsExpandTrigger
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 " Favorite colorscheme
 " ironman, desert, inkpot, neon, wombat256, zenburn, molokai
-"colorscheme molokai
-"colorscheme darkerdesert
+
 if has("gui_running")
   "let g:solarized_contrast = "high"
   "let g:solarized_visibility = "high"
   "colorscheme solarized
   "colorscheme base16-default
   colorscheme atom-dark
+else
+  colorscheme atom-dark-256
 endif
 
 " Who doesn't like autoindent? - we dont need this any more
@@ -150,7 +159,7 @@ set mouse=a
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 "set textwidth=150
-set colorcolumn=115
+set colorcolumn=101
 " highlight matching braces
 set showmatch
 " intelligent comments
@@ -310,10 +319,14 @@ let g:miniBufExplModSelTarget = 1
 " show hidden files in nerdtree
 let NERDTreeShowHidden=1
 
+let g:ctrlp_switch_buffer = 0
+
 " Syntastic options
 let g:syntastic_cpp_check_header = 1
 "let g:syntastic_cpp_include_dirs = ['../include','include']
-let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
+"let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
+"let g:ycm_register_as_syntastic_checker = 0
+"let g:syntastic_cpp_checkers=['clang', 'cpplint']
 "let g:syntastic_cpp_checker = ['ycm']
 "let g:syntastic_cpp_compiler_options = ' -std=c++11'
 
@@ -321,6 +334,10 @@ let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
 set completeopt=menu
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.py'
+"let g:ycm_server_keep_logfiles = 1
+"let g:ycm_server_log_level = 'debug'
+"let g:ycm_server_use_vim_stdout = 1
+
 "let g:ycm_add_preview_to_completeopt = 0
 "let g:ycm_autoclose_preview_window_after_completion = 0
 "let g:ycm_autoclose_preview_window_after_insertion = 0
@@ -342,7 +359,6 @@ let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.p
 "Set the following lines in your ~/.vimrc or the systemwide /etc/vimrc:
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
-
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
