@@ -40,7 +40,7 @@ nitrogen --restore &
 
 #cairo-dock -o &
 plank &
-volwheel &
+#volwheel &
 
 # Some effects
 #compton -cCGb
@@ -50,7 +50,7 @@ volwheel &
 compton -C &
 
 # Task bars
-#trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
+trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 &
 #trayer --SetDockType false --SetPartialStrut false --expand true --widthtype request --transparent true --alpha 255 --edge bottom --align left --margin 100 --height 200 &
 
 # Desktop info
@@ -75,12 +75,15 @@ xfce4-power-manager &
 
 #skype &
 
-#transmission-gtk --minimized &
+transmission-gtk --minimized &
 #rescuetime &
 
 #eval `ssh-agent -s` &
 
 #redshiftgui &
+
+# restore sound settings stored with: alsactl --file ~/.config/asound.state store
+alsactl --file ~/.config/asound.state restore &
 
 ######### END CUSTOM #########
 

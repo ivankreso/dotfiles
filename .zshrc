@@ -5,7 +5,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="gnzh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -53,7 +54,7 @@ plugins=(git git-extras git-flow archlinux common-aliases)
 
 # User configuration
 
-export PATH="/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/mpirt/bin/intel64:/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/bin/intel64_mic:/opt/intel/composerxe/debugger/gui/intel64:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/intel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl"
+#export PATH="/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/mpirt/bin/intel64:/opt/intel/composerxe/bin/intel64:/opt/intel/composerxe/bin/intel64_mic:/opt/intel/composerxe/debugger/gui/intel64:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/intel/bin:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -96,7 +97,9 @@ export QT_STYLE_OVERRIDE=gtk
 
 #export PYTHONPATH="/usr/lib/python2.7/site-packages"
 #source /opt/ros/indigo/setup.zsh
+alias catkin_make='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
+alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
 
-unset GREP_OPTIONS
-alias ssh="ssh -Y"
+alias ssh="ssh -Y -C"
 alias yaourt_update="yaourt --noconfirm -Syua"
+

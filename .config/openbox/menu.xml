@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu>
 	<menu id="root-menu" label="OpenBox 3">
-		<item label="Chromium">
+		<item label="Firefox">
 			<action name="Execute">
-				<execute>chromium</execute>
+				<execute>firefox</execute>
 			</action>
 		</item>
 		<item label="Thunderbird">
@@ -16,9 +16,9 @@
 				<execute>gnome-control-center network</execute>
 			</action>
 		</item>
-		<item label="Sound Settings">
+		<item label="Sound Mixer">
 			<action name="Execute">
-				<execute>gnome-control-center sound</execute>
+				<execute>xfce4-mixer</execute>
 			</action>
 		</item>
 		<item label="Power Manager">
@@ -59,11 +59,6 @@
 		<item label="Transmission">
 			<action name="Execute">
 				<execute>transmission-gtk</execute>
-			</action>
-		</item>
-		<item label="Firefox">
-			<action name="Execute">
-				<execute>firefox</execute>
 			</action>
 		</item>
 		<item label="Speedcrunch">

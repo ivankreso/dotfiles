@@ -67,7 +67,9 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'klen/python-mode'
 "Plugin 'davidhalter/jedi-vim'
+
 
 Plugin 'gosukiwi/vim-atom-dark'
 Plugin 'chriskempson/base16-vim'

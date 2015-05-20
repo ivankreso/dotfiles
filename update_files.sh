@@ -14,6 +14,7 @@ cp ~/.valgrindrc .
 cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/fstab .
+cp --parents ~/.ssh/config .
 #cp ~/.xinitrc .
 #cp ~/.emacs .
 #cp ~/.conkyrc .

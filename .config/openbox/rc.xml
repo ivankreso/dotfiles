@@ -181,7 +181,7 @@
     </keybind>
     <keybind key="W-t">
       <action name="Execute">
-        <command>urxvt --borderLess</command>
+        <command>xfce4-terminal --maximize</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
@@ -239,7 +239,7 @@
     </keybind>
     <keybind key="W-s">
       <action name="Execute">
-        <command>gnome-control-center sound</command>
+        <command>alsactl --file ~/.config/asound.state restore</command>
       </action>
     </keybind>
     <keybind key="W-l">
