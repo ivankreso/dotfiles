@@ -103,3 +103,8 @@ alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/py
 alias ssh="ssh -Y -C"
 alias yaourt_update="yaourt --noconfirm -Syua"
 
+
+
+export PATH=/home/kivan/libraries/install/torch/install/bin:$PATH  # Added automatically by torch-dist
+export LD_LIBRARY_PATH=/home/kivan/libraries/install/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
+export DYLD_LIBRARY_PATH=/home/kivan/libraries/install/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist

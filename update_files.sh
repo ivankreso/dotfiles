@@ -15,6 +15,7 @@ cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/fstab .
 cp --parents ~/.ssh/config .
+cp -r --parents ~/.mozilla/firefox/is68sox3.default/chrome .
 #cp ~/.xinitrc .
 #cp ~/.emacs .
 #cp ~/.conkyrc .
@@ -27,6 +28,9 @@ cp ~/.config/gtk-3.0/settings.ini .config/gtk-3.0/settings.ini
 cp -rf ~/.config/openbox .config/openbox
 rm -rf Scripts/
 cp -rf ~/Scripts/ .
+rm -rf .i3/
+cp -rf ~/.i3/ .
+
 #rm -rf .mpd/
 #mkdir .mpd
 #cp -rf ~/.mpd/mpd.conf .mpd/mpd.conf
@@ -37,7 +41,5 @@ cp -rf ~/Scripts/ .
 
 #rm -rf .xmonad/
 #cp -rf ~/.xmonad/ .
-#rm -rf .i3/
-#cp -rf ~/.i3/ .
 #rm -rf .vim/
 #cp -rf ~/.vim .
