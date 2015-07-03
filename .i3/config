@@ -185,6 +185,9 @@ mode "$mode_system" {
 
 bindsym $mod+Pause mode "$mode_system"
 
+# Print screen
+bindsym Print exec gnome-screenshot --interactive
+
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
@@ -205,6 +208,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 for_window [class="^Spotify$"] floating enable
 
+exec --no-startup-id xrandr --output LVDS1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+
 # doesnt work
 #exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
@@ -220,8 +225,9 @@ exec --no-startup-id xset m 7 10     # Very Fast
 
 # Keyboard speed control
 exec --no-startup-id xset r rate 200 25
+exec --no-startup-id xset dpms 600
 
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id transmission-gtk --minimized
 
-exec --no-startup-id xset dpms 600
