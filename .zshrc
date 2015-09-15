@@ -81,6 +81,10 @@ fi
 # dont share history across all terminals
 unsetopt share_history
 
+
+## systemctl --user enable ssh-agent.service
+#export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 export PATH=$PATH:/home/kivan/.gem/ruby/2.1.0/bin/
 export LD_LIBRARY_PATH=/usr/local/atlas/lib/:/home/kivan/Projects/caffe/build/lib/:LD_LIBRARY_PATH
 export EDITOR="gvim"
@@ -108,3 +112,4 @@ alias yaourt_update="yaourt --noconfirm -Syua"
 export PATH=/home/kivan/libraries/install/torch/install/bin:$PATH  # Added automatically by torch-dist
 export LD_LIBRARY_PATH=/home/kivan/libraries/install/torch/install/lib:$LD_LIBRARY_PATH  # Added automatically by torch-dist
 export DYLD_LIBRARY_PATH=/home/kivan/libraries/install/torch/install/lib:$DYLD_LIBRARY_PATH  # Added automatically by torch-dist
+

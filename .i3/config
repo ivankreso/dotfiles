@@ -167,6 +167,11 @@ bar {
 
 ######################<<CUSTOM>>######################
 
+mode "pass-through" {
+  bindsym Mod1+t mode "default"
+}
+bindsym Mod1+t mode "pass-through"
+
 set $Locker i3lock && sleep 1
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -230,4 +235,5 @@ exec --no-startup-id xset dpms 600
 exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id transmission-gtk --minimized
+exec --no-startup-id dropbox
 
