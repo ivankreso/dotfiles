@@ -96,8 +96,8 @@ export QT_STYLE_OVERRIDE=gtk
 #eval $(ssh-agent -s) > /dev/null
 
 # clang still lacks OpenMP
-#export CC=/usr/bin/clang
-#export CXX=/usr/bin/clang++
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
 
 #export PYTHONPATH="/usr/lib/python2.7/site-packages"
 #source /opt/ros/indigo/setup.zsh

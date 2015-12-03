@@ -194,9 +194,13 @@ bindsym $mod+Pause mode "$mode_system"
 bindsym Print exec gnome-screenshot --interactive
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%   #increase sound volume
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%   #decrease sound volume
+#bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle         # mute sound
+
+bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 2dB+
+bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 2dB-
+bindsym XF86AudioMute exec amixer -q set Master toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -206,8 +210,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
+#bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
