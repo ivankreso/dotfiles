@@ -31,6 +31,7 @@ rm -rf Scripts/
 cp -rf ~/Scripts/ .
 rm -rf .i3/
 cp -rf ~/.i3/ .
+cp -rf ~/.screenlayout/ .
 
 #rm -rf .mpd/
 #mkdir .mpd

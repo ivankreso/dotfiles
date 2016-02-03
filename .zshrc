@@ -104,7 +104,8 @@ export CXX=/usr/bin/clang++
 alias catkin_make='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
 alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
 
-alias ssh="ssh -Y -C"
+#alias ssh="ssh -Y -C"
+alias ssh="ssh -C"
 alias yaourt_update="yaourt --noconfirm -Syua"
 
 
