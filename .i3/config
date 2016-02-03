@@ -218,7 +218,7 @@ bindsym XF86AudioPrev exec playerctl previous
 for_window [class="^Spotify$"] floating enable
 
 #exec --no-startup-id xrandr --output LVDS1 --off --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
-exec --no-startup-id xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1600x900 --pos 1920x180 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+exec --no-startup-id xrandr --output VIRTUAL1 --off --output LVDS1 --mode 1600x900 --pos 1920x660 --rotate normal --output VGA1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # doesnt work
 #exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
