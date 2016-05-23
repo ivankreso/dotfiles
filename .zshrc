@@ -95,9 +95,9 @@ export QT_STYLE_OVERRIDE=gtk
 
 #eval $(ssh-agent -s) > /dev/null
 
-# clang still lacks OpenMP
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
+# clang is still unstable
+#export CC=/usr/bin/clang
+#export CXX=/usr/bin/clang++
 
 #export PYTHONPATH="/usr/lib/python2.7/site-packages"
 #source /opt/ros/indigo/setup.zsh
@@ -105,7 +105,7 @@ alias catkin_make='catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INC
 alias catkin_make_isolated='catkin_make_isolated -DPYTHON_EXECUTABLE=/usr/bin/python2 -DPYTHON_INCLUDE_DIR=/usr/include/python2.7 -DPYTHON_LIBRARY=/usr/lib/libpython2.7.so'
 
 #alias ssh="ssh -Y -C"
-alias ssh="ssh -C"
+alias ssh="ssh -Y"
 alias yaourt_update="yaourt --noconfirm -Syua"
 
 

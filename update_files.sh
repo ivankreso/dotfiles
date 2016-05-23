@@ -13,6 +13,7 @@ cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
 cp --parents /etc/samba/smb.conf .
+cp --parents /home/kivan/toolbox/ulogme/render/render_settings.js .
 cp --parents /etc/systemd/logind.conf .
 cp --parents /etc/fstab .
 cp --parents ~/.ssh/config .
