@@ -141,10 +141,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -164,12 +164,15 @@ bindsym $mod+r mode "resize"
 #bar {
 #        status_command i3status
 #}
+
 bar {
+    #font            pango:Fira Mono 9
+    position        top
+    #status_command  i3status --config ~/.i3/i3status.conf
+    status_command  i3blocks
     #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
     #font pango:DejaVu Sans Mono 10
-    font pango:Fira Mono 9
     #status_command i3status --config ~/.i3/status.conf
-    status_command i3status --config ~/.i3/i3status.conf
 }
 
 

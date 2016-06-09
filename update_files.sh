@@ -12,6 +12,7 @@ cp ~/.gitconfig .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
+cp ~/.i3blocks .
 cp --parents /etc/samba/smb.conf .
 cp --parents /home/kivan/toolbox/ulogme/render/render_settings.js .
 cp --parents /etc/systemd/logind.conf .
