@@ -19,17 +19,19 @@ xset m 7 10 &     # Very Fast
 #xset m 0 10 &     # Glacial
 
 # Keyboard speed control
-xset r rate 200 25 &
+xset r rate 200 25
+xset s 600 600
+xset dpms 600 600 600
 
 # Wallpapers
 nitrogen --restore &
 
 # Some effects
-#compton -cCGb
 #compton --config ~/.compton.conf -b
+compton &
+#compton -cCGb
 #cairo-compmgr &
 #xcompmgr &
-compton -C &
 
 # Task bars
 #cairo-dock -o &
@@ -40,7 +42,7 @@ trayer --SetDockType false --SetPartialStrut false --expand true --widthtype req
 # Desktop info
 #conky -c /home/kreso/.conkycolors/conkyrc &
 #conky -c ~/.conky/rings/conkyrc0 &
-gnome-screensaver &
+#gnome-screensaver &
 #redshift -l 45.79:15.96 -t 6000:4500 &
 
 #xfce4-power-manager &

@@ -9,6 +9,7 @@ cp ~/.gitconfig .
 cp ~/.Xdefaults .
 cp ~/.Xcolors .
 cp ~/.valgrindrc .
+#cp -rf --parents ~/.config/termite .
 cp --parents ~/.config/gtk-3.0/settings.ini .
 cp --parents /etc/samba/smb.conf .
 cp --parents /etc/systemd/logind.conf .
@@ -27,6 +28,7 @@ cp --parents /etc/fstab .
 rm -rf .config/
 mkdir .config
 cp -rf ~/.config/openbox .config/openbox
+cp -rf ~/.config/termite .config/termite
 rm -rf Scripts/
 cp -rf ~/Scripts/ .
 #rm -rf .mpd/
