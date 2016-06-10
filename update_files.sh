@@ -26,6 +26,7 @@ cp -r --parents ~/.mozilla/firefox/is68sox3.default/chrome .
 #cp --parents /usr/local/bin/rc.local .
 
 mkdir -p magellan
+scp kivan@magellan.zemris.fer.hr:~/.vimrc magellan/
 scp kivan@magellan.zemris.fer.hr:~/.pylintrc magellan/
 scp kivan@magellan.zemris.fer.hr:~/.zshrc magellan/
 scp -r kivan@magellan.zemris.fer.hr:~/.i3/ magellan/
