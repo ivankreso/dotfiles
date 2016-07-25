@@ -1,4 +1,0 @@
---memcheck:leak-check=full
---gen-suppressions=all
---suppressions=/home/kivan/Scripts/devel/valgrind/opencv.supp
-

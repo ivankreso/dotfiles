@@ -1,27 +1,5 @@
-[user]
-	name = Ivan Kreso
-	email = ivan.kreso@fer.hr
-[core]
-	editor = gvim
-[merge]
-	tool = meld
-[credential]
-	helper = cache --timeout=3600
-[giggle]
-	main-window-maximized = false
-	main-window-geometry = 759x584+783+191
-	history-view-vpane-position = 256
-	main-window-view = HistoryView
-	file-view-vpane-position = 96
-[color]
-	ui = true
-[mergetool "extMerge"]
-	cmd = meld \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
-[mergetool]
-	trustExitCode = false
-[diff]
-	external = meld
-[push]
-	default = simple
 [alias]
 	autopush = ! git add -A && git commit -m \"auto_commit\" && git push
+[user]
+	email = kreso.ivan@gmail.com
+	name = Ivan Kreso

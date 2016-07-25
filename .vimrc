@@ -14,12 +14,15 @@ if has("gui_running")
    set lines=58 columns=160
    " set font for gvim
    "set guifont=Inconsolata\ Medium\ 10
-   set guifont=Inconsolata\ Medium\ 11
+   "set guifont=Inconsolata-g\ Medium\ 10
+   set guifont=Inconsolata-g\ 10
+   "set guifont=Inconsolata-g\ 11
    "set guifont=mplus\ Medium\ 6
 else
   " for console
   set t_Co=256
-  set background=dark
+  set guifont=Inconsolata-g\ 10
+  "set background=dark
 endif
 
 " set utf-8 encoding
@@ -30,6 +33,7 @@ set termencoding=utf-8
 " set <leader> to , (default is \)
 let mapleader = ","
 map <Space> <Leader>
+map <Space><Space> <Leader><Leader>
 "let mapleader = " "
 "let mapleader="\<space>"
 "let maplocalleader = ","
@@ -43,6 +47,7 @@ nmap <Leader>P "+P
 vmap <Leader>p "+p
 vmap <Leader>P "+P
 nmap <Leader><Leader> V
+nmap ` <NOP>
 
 "au BufNewFile,BufRead *.cpp set syntax=cpp11
 
@@ -58,8 +63,8 @@ call vundle#begin()
 
 " Plugins to install/update with :BundleInstall/BundleUpdate
 Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'octol/vim-cpp-enhanced-highlight'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --system-libclang' }
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
@@ -68,14 +73,14 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'klen/python-mode'
+Plugin 'gosukiwi/vim-atom-dark'
+Plugin 'morhetz/gruvbox'
+"Plugin 'klen/python-mode'
 "Plugin 'davidhalter/jedi-vim'
 
-
-Plugin 'gosukiwi/vim-atom-dark'
-Plugin 'chriskempson/base16-vim'
-Plugin 'altercation/vim-colors-solarized'
-"Plugin 'flazz/vim-colorschemes'
+" broken:
+"Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-lua-ftplugin'
 
 " Track the engine.
 "Plugin 'ervandew/supertab'
@@ -104,11 +109,25 @@ if has("gui_running")
   "let g:solarized_contrast = "high"
   "let g:solarized_visibility = "high"
   "colorscheme solarized
-  "colorscheme base16-default
-  colorscheme atom-dark
+  "colorscheme atom-dark
+  colorscheme gruvbox
+  "let g:gruvbox_contrast_light = "hard"
 else
   colorscheme atom-dark-256
+  colorscheme gruvbox
+  let g:gruvbox_contrast_light = "hard"
 endif
+"nnoremap <silent> [oh :call gruvbox#hls_show()<CR>
+"nnoremap <silent> ]oh :call gruvbox#hls_hide()<CR>
+"nnoremap <silent> coh :call gruvbox#hls_toggle()<CR>
+"nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+"nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+"nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+
+set background=light
+
+"colorscheme molokai
+"colorscheme darkerdesert
 
 " Who doesn't like autoindent? - we dont need this any more
 " set autoindent
@@ -236,6 +255,7 @@ set nowb
 " disable autocomments
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 "set formatoptions-=cro
+au FileType python setl sw=2 sts=2 et
 
 " ----------Key shortcuts-----------
 " NERDtree toggle - no recursive map needed
@@ -325,6 +345,7 @@ let NERDTreeShowHidden=1
 let g:ctrlp_switch_buffer = 0
 
 " Syntastic options
+let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_cpp_check_header = 1
 "let g:syntastic_cpp_include_dirs = ['../include','include']
 "let g:syntastic_cpp_include_dirs = ['/usr/include/pcl-1.7/']
@@ -336,7 +357,7 @@ let g:syntastic_cpp_check_header = 1
 " youcompleteme options
 set completeopt=menu
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_global_ycm_extra_conf = '/home/kivan/Dropbox/src/cpp/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/kivan/devel/config/ycm_extra_conf.py'
 "let g:ycm_server_keep_logfiles = 1
 "let g:ycm_server_log_level = 'debug'
 "let g:ycm_server_use_vim_stdout = 1
@@ -365,3 +386,8 @@ let g:tex_flavor = "latex"
 
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0
+
+let g:pymode_warnings = 1
+let g:pymode_folding = 0
+let g:pymode_indent = 1
+let g:pymode_doc = 1
