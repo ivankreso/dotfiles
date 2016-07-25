@@ -15,5 +15,5 @@ cp ~/.valgrindrc .
 cp ~/.i3blocks .
 cp ~/.pylintrc .
 
-rm -rf .config/
-cp -rf ~/.config/nvim .config/nvim
+mkdir -p .config/nvim
+cp ~/.config/nvim/init.vim .config/nvim
