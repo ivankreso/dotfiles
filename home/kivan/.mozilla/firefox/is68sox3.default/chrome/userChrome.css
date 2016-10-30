@@ -1,4 +1,0 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
-
-#toolbar-menubar[moz-collapsed="true"] { visibility: visible !important; }
-#PersonalToolbar[moz-collapsed="true"] { visibility: visible !important; }
